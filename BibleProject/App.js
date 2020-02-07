@@ -3,10 +3,13 @@
  */
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import ImageMarker, { markText, markImage } from "react-native-image-marker";
+import { font } from 'react-native'; //font in package.json
 
 
 export default class BibleData extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {       // Initialize state (don't call setState in ctor)
@@ -14,6 +17,7 @@ export default class BibleData extends Component {
   }
     this.getBibleApi = this.getBibleApi.bind(this);
     this.getBibleApi2 = this.getBibleApi2.bind(this);
+    //this.markImage = this.markImage.bind(this);
     //this.BibleVerses = this.BibleVerses.bind(this);
   }
 
@@ -52,7 +56,25 @@ export default class BibleData extends Component {
     });
   }
 
-  /*BibleVerses = () => {
+ 
+
+  /*markImage() {
+    console.log("markImage uses fetch.then.then.catch");
+    const markImageURL = "https://reactnativeexample.com/add-watermark-to-the-image-with-text-and-icon/";
+      return fetch('https://reactnativeexample.com/add-watermark-to-the-image-with-text-and-icon/')
+        .then((response) => response.json())
+        .then((responseJson) => {
+          this.setState({
+            isLoading: false,
+            ImageMarkerData: responseJson
+          })
+        }).catch((error) => {
+          console.log(error)
+          });
+      }
+  
+
+  BibleVerses = () => {
     return this.state.BibleData.verses.map((num) => {
       return (
         <View>
@@ -63,6 +85,7 @@ export default class BibleData extends Component {
       }
     )
   }*/
+  
 
 
   render() {
@@ -79,9 +102,20 @@ export default class BibleData extends Component {
       return (
       <View style={styles.container}>
         <Text style = {styles.translation}>{this.state.BibleData.translation_name}</Text>
+        <View style={styles.circle}>
+        <Text style={styles.sample}>Verse 4 2 Day</Text>
+      </View>
+       
+        
         <Text style = {styles.verse}>{this.state.BibleData.text}</Text>
         <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
-        
+        <View style = {styles.rectangle2}></View>
+        <View style= {styles.rectangle}>
+        <Button button = {styles.buttonStyle} 
+        title = "Purpose" 
+        color = "#263859"
+        />
+      </View>
       </View>
     );
    }
@@ -89,19 +123,17 @@ export default class BibleData extends Component {
 }
   const styles = StyleSheet.create({
     container: {
-          //color: '#e9e2d0',
-          flex: 0.8,
-          fontSize: 15,
-          justifyContent: "center",
-          //textAlign: 'center',
-          alignItems: 'center',
-          //backgroundColor: '#6e5773'
-          paddingLeft: 7,
-          paddingRight: 7,
-        },
-    translation: {
-          fontSize: 15,
           flex: 0.5,
+          justifyContent: "center",
+          alignItems: 'center',
+          backgroundColor: '#95adbe',
+          //paddingLeft: 7,
+          //paddingRight: 7,
+          },
+    translation: {
+          paddingTop: 290,
+          paddingBottom: 20,
+          fontSize: 15,
           //justifyContent: "center",
           textAlign: 'center',
           //alignItems: 'center',
@@ -109,17 +141,19 @@ export default class BibleData extends Component {
           paddingLeft: 7,
           paddingRight: 7,
           //fontWeight: 'bold'
-    },
+          //fontFamily: 'AmaticSC-Regular',   //how to add fonts
+          },
     verse: {
           fontSize: 18,
           //justifyContent: "center",
           textAlign: 'center',
           //alignItems: 'center',
           //backgroundColor: '#6e5773'
+          paddingTop: 40,
           paddingLeft: 7,
           paddingRight: 7,
           //fontWeight: 'bold'
-    },
+          },
     container3: {
           fontSize: 15,
           //justifyContent: "center",
@@ -129,7 +163,46 @@ export default class BibleData extends Component {
           paddingLeft: 7,
           paddingRight: 7,
           fontWeight: 'bold'
-        }
-      }
+          },
+    circle: {
+          width: 200,
+          height: 200,
+          borderRadius: 200/2,
+          backgroundColor: '#ffd082',
+          justifyContent: 'center'
+         },
+    sample: {
+          alignSelf: 'center', 
+          fontWeight: 'bold', 
+          color: 'black', 
+          fontSize: 20
+      },
+    rectangle: {
+          width:400,
+          height:60,
+          backgroundColor: '#95adbe',
+      },
+    rectangle2: {
+          width:400,
+          height:50,
+          backgroundColor: 'white',
+      },
+    buttonStyle: {
+        //flex: .2,
+        color: 'black',
+        flexDirection: 'row',
+        marginTop:10,
+        paddingTop:15,
+        paddingBottom:15,
+        marginLeft:30,
+        marginRight:30,
+        backgroundColor:'#f2f6f5',
+        //borderRadius:10,
+        borderWidth: 1,
+        borderColor: '#fff'
+      },
+    }
   )
+  
+    
   

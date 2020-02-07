@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-custom-fonts": "^1.0.5",
+    "react-native-image-marker": "^0.6.1",
+    "typescript": "^3.7.5"
   },
   "devDependencies": {
     "@babel/core": "7.8.4",
