@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
-export default class BibleData  extends Component {
+export default class BibleData extends Component {
   constructor(props) {
     super(props);
     this.state = {       // Initialize state (don't call setState in ctor)
@@ -14,6 +14,7 @@ export default class BibleData  extends Component {
   }
     this.getBibleApi = this.getBibleApi.bind(this);
     this.getBibleApi2 = this.getBibleApi2.bind(this);
+    //this.BibleVerses = this.BibleVerses.bind(this);
   }
 
   componentDidMount() {
@@ -51,6 +52,18 @@ export default class BibleData  extends Component {
     });
   }
 
+  /*BibleVerses = () => {
+    return this.state.BibleData.verses.map((num) => {
+      return (
+        <View>
+          <Text style={styles.container}>Verse</Text>
+          <Text style={styles.container}>{num.text}</Text>
+        </View>
+        );
+      }
+    )
+  }*/
+
 
   render() {
     if (this.state.isLoading) {
@@ -63,8 +76,9 @@ export default class BibleData  extends Component {
       // Show data from API
       return (
       <View>
-        <Text style={styles.container}>{this.props.reference}</Text>
-        <Text>{this.state.BibleData.reference}</Text>
+        <Text style = {styles.container}>{this.state.BibleData.reference}</Text>
+        <Text style = {styles.container2}>{this.state.BibleData.text}</Text>
+        
       </View>
     );
    }
@@ -72,12 +86,17 @@ export default class BibleData  extends Component {
 }
   const styles = StyleSheet.create({
     container: {
-          color: '#e9e2d0',
+          //color: '#e9e2d0',
+          fontWeight: 'bold',
           fontSize: 15,
           justifyContent: "center",
           textAlign: 'center',
-          backgroundColor: '#6e5773'
-        }
+          //backgroundColor: '#6e5773'
+        },
+    container2: {
+          justifyContent: "center",
+          textAlign: 'center',
+    }
       }
   )
   
