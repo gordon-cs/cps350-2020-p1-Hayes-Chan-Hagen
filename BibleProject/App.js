@@ -138,11 +138,10 @@ export default class BibleData extends Component {
       // Show data from API
       return (
       <View style={styles.container}>
-        <Text style = {styles.translation}></Text>
+        <Text style = {styles.placeholder}></Text>
         <View style={styles.circle}>
         <Text style={styles.sample}>Verse 4 2 Day</Text>
       </View>
-       
        
         <Text style = {styles.verse}>{this.state.BibleData.text}</Text>
         <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
@@ -167,7 +166,7 @@ export default class BibleData extends Component {
           //paddingLeft: 7,
           //paddingRight: 7,
           },
-    translation: {
+    placeholder: {
           paddingTop: 280,
           paddingBottom: 20,
           fontSize: 15,
@@ -181,7 +180,7 @@ export default class BibleData extends Component {
           //fontFamily: 'AmaticSC-Regular',   //how to add fonts
           },
     verse: {
-          fontSize: 18,
+          fontSize: 22,
           //justifyContent: "center",
           textAlign: 'center',
           //alignItems: 'center',
@@ -190,6 +189,7 @@ export default class BibleData extends Component {
           paddingLeft: 7,
           paddingRight: 7,
           //fontWeight: 'bold'
+          fontFamily: 'AmaticSC-Bold'
           },
     container3: {
           fontSize: 15,
@@ -199,7 +199,8 @@ export default class BibleData extends Component {
           //backgroundColor: '#6e5773'
           paddingLeft: 7,
           paddingRight: 7,
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          //fontFamily: 'AmaticSC-Bold'
           },
     circle: {
           width: 200,
@@ -212,7 +213,7 @@ export default class BibleData extends Component {
           alignSelf: 'center', 
           fontWeight: 'bold', 
           color: 'black', 
-          fontSize: 20
+          fontSize: 20,
       },
     rectangle: {
           width:400,
