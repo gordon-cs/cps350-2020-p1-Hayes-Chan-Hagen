@@ -69,18 +69,18 @@ export default class BibleData extends Component {
     if (this.state.isLoading) {
       // No data, show something in the meantime
       return (
-      <View style={styles.container}>
+      <View style={{justifyContent:"center",backgroundColor:"#fff", alignItems:"center"}}>
         <Text>Waiting for data ...</Text>
       </View>
-      
+
       );
     } else {
       // Show data from API
       return (
       <View style={styles.container}>
-        <Text style = {styles.container2}>{this.state.BibleData.translation_name}</Text>
-        <Text style = {styles.container2}>{this.state.BibleData.text}</Text>
-        <Text style = {styles.container2}>{this.state.BibleData.reference}</Text>
+        <Text style = {styles.translation}>{this.state.BibleData.translation_name}</Text>
+        <Text style = {styles.verse}>{this.state.BibleData.text}</Text>
+        <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
         
       </View>
     );
@@ -90,20 +90,46 @@ export default class BibleData extends Component {
   const styles = StyleSheet.create({
     container: {
           //color: '#e9e2d0',
-          flex: 1,
-          fontWeight: 'bold',
+          flex: 0.8,
           fontSize: 15,
           justifyContent: "center",
           //textAlign: 'center',
           alignItems: 'center',
           //backgroundColor: '#6e5773'
           paddingLeft: 7,
-          paddingRight: 7
+          paddingRight: 7,
         },
-    container2: {
-          justifyContent: "center",
+    translation: {
+          fontSize: 15,
+          flex: 0.5,
+          //justifyContent: "center",
           textAlign: 'center',
-    }
+          //alignItems: 'center',
+          //backgroundColor: '#6e5773'
+          paddingLeft: 7,
+          paddingRight: 7,
+          //fontWeight: 'bold'
+    },
+    verse: {
+          fontSize: 18,
+          //justifyContent: "center",
+          textAlign: 'center',
+          //alignItems: 'center',
+          //backgroundColor: '#6e5773'
+          paddingLeft: 7,
+          paddingRight: 7,
+          //fontWeight: 'bold'
+    },
+    container3: {
+          fontSize: 15,
+          //justifyContent: "center",
+          textAlign: 'center',
+          //alignItems: 'center',
+          //backgroundColor: '#6e5773'
+          paddingLeft: 7,
+          paddingRight: 7,
+          fontWeight: 'bold'
+        }
       }
   )
   
