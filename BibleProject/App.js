@@ -69,15 +69,18 @@ export default class BibleData extends Component {
     if (this.state.isLoading) {
       // No data, show something in the meantime
       return (
-        <Text>Waiting for data ...
-        </Text>
+      <View style={styles.container}>
+        <Text>Waiting for data ...</Text>
+      </View>
+      
       );
     } else {
       // Show data from API
       return (
-      <View>
-        <Text style = {styles.container}>{this.state.BibleData.reference}</Text>
+      <View style={styles.container}>
+        <Text style = {styles.container2}>{this.state.BibleData.translation_name}</Text>
         <Text style = {styles.container2}>{this.state.BibleData.text}</Text>
+        <Text style = {styles.container2}>{this.state.BibleData.reference}</Text>
         
       </View>
     );
@@ -87,11 +90,15 @@ export default class BibleData extends Component {
   const styles = StyleSheet.create({
     container: {
           //color: '#e9e2d0',
+          flex: 1,
           fontWeight: 'bold',
           fontSize: 15,
           justifyContent: "center",
-          textAlign: 'center',
+          //textAlign: 'center',
+          alignItems: 'center',
           //backgroundColor: '#6e5773'
+          paddingLeft: 7,
+          paddingRight: 7
         },
     container2: {
           justifyContent: "center",
