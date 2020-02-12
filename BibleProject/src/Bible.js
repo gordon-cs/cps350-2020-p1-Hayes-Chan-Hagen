@@ -4,7 +4,7 @@
 
 import React, { Component } from 'react';
 import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
-import ImageMarker, { Position, ImageFormat } from 'react-native-image-marker'
+import ImageMarker from 'react-native-image-marker'
 import ImagePicker from 'react-native-image-picker';
 import { font } from 'react-native'; //font in package.json
 import BibleData from './BibleData';
@@ -16,36 +16,11 @@ export default  class Bible extends Component  {
     constructor(props)  {
         super(props);
         this.state  = {
-            isLoading: true,
-            /*translations: {
-          'Cherokee': {
-             name: 'Cherokee New Testament',
-             identifier: 'cherokee'
-          },
-          'English': {
-             name: 'King James Version',
-             identifier: 'kjv'
-          },		
-          'English': {
-             name: 'World English Bible',
-             identifier: 'web (default)'
-          },
-          'Latin': {
-             name: 'Clementine Latin Vulgate',
-             identifier: 'clementine'
-          },
-          'Portuguese': {
-             name: 'João Ferreira de Almeida',
-             identifier: 'almeida'
-          },
-          'Romanian': {
-             name: 'Romanian Corrected Cornilescu Version',
-             identifier: 'rccv'	
-          }
-        }
-      }*/
+            isLoading: true
       //Set up methods by binding this for them
     }
+    
+      //this.ImageMarker =  this.ImageMarker.bind(this);
       this.getBibleApi = this.getBibleApi.bind(this);
       this.getBibleApi2 = this.getBibleApi2.bind(this);
       //this.handleTranslations = this.handleTranslations.bind(this);
@@ -54,13 +29,6 @@ export default  class Bible extends Component  {
       //this.handleChoosePhoto = this.handleChoosePhoto.bind(this);
     }
 
-    /*handleTranslation(newTranslation) {
-    this.setState({
-      translation: newTranslation,
-      isLoading: true,
-    });
-    this.getBibleApi(this.state.translation[newTranslation].identifier);
-  }*/
   /* Get real API data when component is first loaded.
    * (Later, might want to refresh this periodically)
    * Caution: repo must stay private since it contains secret API key.
@@ -69,6 +37,7 @@ export default  class Bible extends Component  {
   componentDidMount() {
     this.getBibleApi2();
   }
+  
   async getBibleApi() {
     console.log("getBibleApi uses try await await catch");
     const BibleURL = 'https://bible-api.com/john%203:16';
@@ -99,6 +68,8 @@ export default  class Bible extends Component  {
     console.error(error);
     });
   }
+
+  
 
   /*handleChoosePhoto = () => {
     console.log("pressed")
@@ -144,26 +115,34 @@ export default  class Bible extends Component  {
             <View style={styles.logo}><Image source = {logo}/></View>
               <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
               <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
+           
             <View style={styles.container}/>
             <View style={styles.bottomBar}>
-                <View style={[styles.buttonBar, styles.purposeB]} >
+                <View style={[styles.buttonBar, styles.purposeB]} /*button format not quite right*/ >
+                  
                   <Button title = "Purpose" color = '#d4d7dd'//want this text to be black not white..
-                   onPress = { this.onPress }>
-                    </Button></View>
+                   onPress = { this.onPress }> 
+                    </Button></View>  
+               
                 <View style={[styles.buttonBar, styles.styleB]} >
                   <Button title = "Style" color = '#738598' //want this text to be black not white..
                    onPress = { this.onPress }>
                     </Button></View>
+                
                 <View style={[styles.buttonBar, styles.fontB]} >
                   <Button title = "Font" color = '#3c4f65'//want this text to be black not white..
                    onPress = { this.onPress }>
                     </Button></View>
+              
                 <View style={[styles.buttonBar, styles.previewB]} >
                   <Button title = "Preview" color = '#f5c16c'//want this text to be black not white..
                    onPress = { this.onPress }>
                     </Button></View>
-                <View style={styles.buttonBar} />
+               
+               
+               
             </View>
+            
         </View>
     );
    }
@@ -175,9 +154,8 @@ export default  class Bible extends Component  {
 
 }
 
-/*
 // More info on all the options is below in the API Reference... just some common use cases shown here
-const options = {
+/*const options = {
     title: 'Select Avatar',
     customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
     storageOptions: {
@@ -186,12 +164,8 @@ const options = {
     },
   };
   
-
-
-
-
   
-  /**
+  
    * The first arg is the options object for customization (it can also be null or omitted for default options),
    * The second arg is the callback which sends object: response (more info in the API Reference)
    
@@ -214,48 +188,52 @@ const options = {
         avatarSource: source,
       });
     }
-  });
+  });*/
 
-*/ 
+
   const styles = StyleSheet.create({
     bottomBar: {
           flexDirection: 'row',
-          height: 60,
-          //justifyContent: 'center'
+          //height: 60,
+          justifyContent:'space-between',
           //alignItems: 'center'
           },
     buttonBar: {
           flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center'
+          justifyContent: 'space-between',
+          //alignItems: 'center'
           },
     purposeB: { 
-          marginLeft: 5,
-          marginRight: 5,
-          marginBottom: 15,
+          // marginLeft: 5,
+          // marginRight: 5,
+          // marginBottom: 15,
           flex: 2, 
-          backgroundColor: '#d4d7dd' 
+          backgroundColor: '#d4d7dd', 
+          justifyContent: 'space-between',
           },
     styleB: { 
-          marginLeft: 8,
-          marginRight: 8,
-          marginBottom: 8,
+          // marginLeft: 8,
+          // marginRight: 8,
+          // marginBottom: 8,
           flex:  2, 
-          backgroundColor: '#738598' 
+          backgroundColor: '#738598', 
+          justifyContent: 'space-between',
           },
     fontB: { 
-          marginLeft: 8,
-          marginRight: 8,
-          marginBottom: 8,
+          // marginLeft: 8,
+          // marginRight: 8,
+          // marginBottom: 8,
           flex:  2, 
-          backgroundColor: '#3c4f65' 
+          backgroundColor: '#3c4f65',
+          justifyContent: 'space-between',
           },
     previewB: { 
-          marginLeft: 5,
-          marginRight: 5,
-          marginBottom: 15,
+          // marginLeft: 5,
+          // marginRight: 5,
+          // marginBottom: 15,
           flex: 2, 
-          backgroundColor: '#f5c16c' 
+          backgroundColor: '#f5c16c',
+          justifyContent: 'space-between',
           },
     container: {
           //flex: 0.5,
