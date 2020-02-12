@@ -10,10 +10,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/native": "^5.0.2",
+    "node": "^13.8.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-custom-fonts": "^1.0.5",
     "react-native-image-marker": "^0.6.1",
+    "react-native-image-picker": "^2.2.1",
+    "react-native-material-design": "^0.3.7",
     "typescript": "^3.7.5"
   },
   "devDependencies": {
