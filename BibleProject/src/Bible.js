@@ -140,23 +140,31 @@ export default  class Bible extends Component  {
       //const {photo} = this.state;
       // Show data from API
       return (
-      <View style={styles.container}>
-        <View><Image source = {logo}/></View>
-
-        <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
-        <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
-        <View>
-          
-        
-        <Button button = {styles.buttonStyle}
-        title = "Purpose" 
-        color = "#263859"
-        onPress = { this.onPress }
-        />
+        <View style={styles.container}>
+            <View style={styles.logo}><Image source = {logo}/></View>
+              <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
+              <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
+            <View style={styles.container}/>
+            <View style={styles.bottomBar}>
+                <View style={[styles.buttonBar, styles.purposeB]} >
+                  <Button title = "Purpose" color = '#d4d7dd'//want this text to be black not white..
+                   onPress = { this.onPress }>
+                    </Button></View>
+                <View style={[styles.buttonBar, styles.styleB]} >
+                  <Button title = "Style" color = '#738598' //want this text to be black not white..
+                   onPress = { this.onPress }>
+                    </Button></View>
+                <View style={[styles.buttonBar, styles.fontB]} >
+                  <Button title = "Font" color = '#3c4f65'//want this text to be black not white..
+                   onPress = { this.onPress }>
+                    </Button></View>
+                <View style={[styles.buttonBar, styles.previewB]} >
+                  <Button title = "Preview" color = '#f5c16c'//want this text to be black not white..
+                   onPress = { this.onPress }>
+                    </Button></View>
+                <View style={styles.buttonBar} />
+            </View>
         </View>
-        
-      </View>
-      
     );
    }
   }
@@ -181,6 +189,8 @@ const options = {
 
 
 
+
+  
   /**
    * The first arg is the options object for customization (it can also be null or omitted for default options),
    * The second arg is the callback which sends object: response (more info in the API Reference)
@@ -207,7 +217,46 @@ const options = {
   });
 
 */ 
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
+    bottomBar: {
+          flexDirection: 'row',
+          height: 60,
+          //justifyContent: 'center'
+          //alignItems: 'center'
+          },
+    buttonBar: {
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center'
+          },
+    purposeB: { 
+          marginLeft: 5,
+          marginRight: 5,
+          marginBottom: 15,
+          flex: 2, 
+          backgroundColor: '#d4d7dd' 
+          },
+    styleB: { 
+          marginLeft: 8,
+          marginRight: 8,
+          marginBottom: 8,
+          flex:  2, 
+          backgroundColor: '#738598' 
+          },
+    fontB: { 
+          marginLeft: 8,
+          marginRight: 8,
+          marginBottom: 8,
+          flex:  2, 
+          backgroundColor: '#3c4f65' 
+          },
+    previewB: { 
+          marginLeft: 5,
+          marginRight: 5,
+          marginBottom: 15,
+          flex: 2, 
+          backgroundColor: '#f5c16c' 
+          },
     container: {
           //flex: 0.5,
           //justifyContent: "center",
@@ -216,8 +265,8 @@ const styles = StyleSheet.create({
           //paddingLeft: 7,
           //paddingRight: 7,
           flex: 1, 
-          justifyContent:"center",
-          alignItems:"center"
+          //justifyContent:"center",
+          //alignItems:"center"
           },
     placeholder: {
           paddingTop: 280,
@@ -233,19 +282,20 @@ const styles = StyleSheet.create({
           //fontFamily: 'AmaticSC-Regular',   //how to add fonts
           },
     verse: {
-          fontSize: 22,
+          fontSize: 17,
           //justifyContent: "center",
           textAlign: 'center',
           //alignItems: 'center',
           //backgroundColor: '#6e5773'
           //paddingTop: 60,
-          //paddingLeft: 7,
-          //paddingRight: 7,
+          paddingLeft: 21,
+          paddingRight: 21,
           //fontWeight: 'bold'
-          fontFamily: 'AmaticSC-Bold'
+          //fontFamily: 'AmaticSC-Bold'
           },
     container3: {
           fontSize: 15,
+          //paddingBottom: 20,
           //justifyContent: "center",
           textAlign: 'center',
           //alignItems: 'center',
@@ -255,31 +305,7 @@ const styles = StyleSheet.create({
           fontWeight: 'bold',
           //fontFamily: 'AmaticSC-Bold'
           },
-    /*circle: {
-          width: 200,
-          height: 200,
-          borderRadius: 200/2,
-          backgroundColor: '#ffd082',
-          justifyContent: 'center'
-         },
-    sample: {
-          alignSelf: 'center', 
-          fontWeight: 'bold', 
-          color: 'black', 
-          fontSize: 20,
-      },*/
-    /*rectangle: {
-          width:400,
-          height:80,
-          backgroundColor: '#95adbe',
-      },
-    rectangle2: {
-          width:400,
-          height:50,
-          backgroundColor: 'white',
-      },*/
     buttonStyle: {
-        flex: 1,
         color: 'black',
         justifyContent: 'flex-end',
         //alignItems: 'center',
@@ -287,10 +313,19 @@ const styles = StyleSheet.create({
         //borderRadius:10,
         borderWidth: 1,
         borderColor: '#fff',
-        bottom: 0,
-        position: 'absolute'
+        //bottom: 0,
+        //position: 'absolute'
+        flex: 1,
+        flexDirection: 'row',
+        marginBottom: 10
+        
       },
-     
+      logo: {
+        justifyContent: 'center',
+        alignItems: 'center',    
+        paddingTop: 50,
+        //paddingBottom: 4,
+      },
     }
   )
   
