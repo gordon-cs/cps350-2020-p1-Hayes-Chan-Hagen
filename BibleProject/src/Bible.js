@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Image, StyleSheet, Text, View, Button } from 'react-native';
+import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import ImageMarker, { Position, ImageFormat } from 'react-native-image-marker'
 import ImagePicker from 'react-native-image-picker';
 import { font } from 'react-native'; //font in package.json
@@ -140,18 +140,20 @@ export default  class Bible extends Component  {
       //const {photo} = this.state;
       // Show data from API
       return (
-      <View style={{flex: 1, justifyContent:"center",backgroundColor:"#95adbe", alignItems:"center"}}>
-        <Text>Logo goes here!</Text> 
-        <View><Image source = {logo.png}/></View>
+      <View style={styles.container}>
+        <View><Image source = {logo}/></View>
 
         <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
         <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
-       
-        <Button 
+        <View>
+          
+        
+        <Button button = {styles.buttonStyle}
         title = "Purpose" 
         color = "#263859"
         onPress = { this.onPress }
         />
+        </View>
         
       </View>
       
@@ -213,6 +215,9 @@ const styles = StyleSheet.create({
           backgroundColor: '#95adbe',
           //paddingLeft: 7,
           //paddingRight: 7,
+          flex: 1, 
+          justifyContent:"center",
+          alignItems:"center"
           },
     placeholder: {
           paddingTop: 280,
@@ -245,8 +250,8 @@ const styles = StyleSheet.create({
           textAlign: 'center',
           //alignItems: 'center',
           //backgroundColor: '#6e5773'
-          paddingLeft: 7,
-          paddingRight: 7,
+          //paddingLeft: 7,
+          //paddingRight: 7,
           fontWeight: 'bold',
           //fontFamily: 'AmaticSC-Bold'
           },
@@ -273,16 +278,19 @@ const styles = StyleSheet.create({
           height:50,
           backgroundColor: 'white',
       },*/
-    /*buttonStyle: {
-        //flex: .2,
+    buttonStyle: {
+        flex: 1,
         color: 'black',
-        flexDirection: 'row',
+        justifyContent: 'flex-end',
         //alignItems: 'center',
         backgroundColor:'#f2f6f5',
         //borderRadius:10,
         borderWidth: 1,
-        borderColor: '#fff'
-      },*/
+        borderColor: '#fff',
+        bottom: 0,
+        position: 'absolute'
+      },
+     
     }
   )
   

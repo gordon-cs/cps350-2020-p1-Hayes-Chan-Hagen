@@ -18,7 +18,7 @@ export default class BibleData extends Component {
 
 
 
-  class Purpose extends Component {
+  /*class Purpose extends Component {
       constructor(props) {
         super(props);
         this.purposeOnPress = this.purposeOnPress.bind(this);
@@ -58,7 +58,7 @@ export default class BibleData extends Component {
             </Text>
           );
         }
-      }
+      }*/
       
     
   
