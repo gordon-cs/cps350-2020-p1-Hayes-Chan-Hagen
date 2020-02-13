@@ -4,11 +4,14 @@
 
 import React, { Component } from 'react';
 import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
-import ImageMarker from 'react-native-image-marker'
-import ImagePicker from 'react-native-image-picker';
-import { font } from 'react-native'; //font in package.json
-import BibleData from './BibleData';
+//import ImageMarker from 'react-native-image-marker'
+//import ImagePicker from 'react-native-image-picker';
+//import { font } from 'react-native'; //font in package.json
+//import BibleData from './BibleData';
 import logo from './images/logo.png';
+//import homepage from './homepage';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 
 export default  class Bible extends Component  {
@@ -23,6 +26,7 @@ export default  class Bible extends Component  {
       //this.ImageMarker =  this.ImageMarker.bind(this);
       this.getBibleApi = this.getBibleApi.bind(this);
       this.getBibleApi2 = this.getBibleApi2.bind(this);
+      //this.onPress = this.onPress.bind(this);
       //this.handleTranslations = this.handleTranslations.bind(this);
       //this.markImage = this.markImage.bind(this);
       //this.BibleVerses = this.BibleVerses.bind(this);
@@ -116,43 +120,99 @@ export default  class Bible extends Component  {
               <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
               <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
            
-            <View style={styles.container}/>
+         
             <View style={styles.bottomBar}>
-                <View style={[styles.buttonBar, styles.purposeB]} /*button format not quite right*/ >
+                <View style={styles.purposeB} >
                   
                   <Button title = "Purpose" color = '#d4d7dd'//want this text to be black not white..
-                   onPress = { this.onPress }> 
+                   onPress = {() => navigate('Layout')}> 
                     </Button></View>  
                
-                <View style={[styles.buttonBar, styles.styleB]} >
+                <View style={styles.styleB} >
                   <Button title = "Style" color = '#738598' //want this text to be black not white..
-                   onPress = { this.onPress }>
+                   onPress = {() => navigate('Layout')}> 
                     </Button></View>
                 
-                <View style={[styles.buttonBar, styles.fontB]} >
+                <View style={styles.fontB} >
                   <Button title = "Font" color = '#3c4f65'//want this text to be black not white..
-                   onPress = { this.onPress }>
+                   onPress = {() => navigate('Layout')}> 
                     </Button></View>
               
-                <View style={[styles.buttonBar, styles.previewB]} >
+                <View style={styles.previewB} >
                   <Button title = "Preview" color = '#f5c16c'//want this text to be black not white..
-                   onPress = { this.onPress }>
-                    </Button></View>
-               
-               
-               
-            </View>
-            
+                   onPress = {() => navigate('Layout')}> 
+                    </Button></View>  
+            </View>        
         </View>
     );
    }
   }
+}
 
-   onPress= () => {
+class HomePage extends React.Component {
+  static navigationOptions = {
+    title: 'Welcome',
+  };
+  render() {
+    const {navigate} = this.props.navigation;
+    return (
+      <Button
+        title="Go to layout page"
+        onPress={() => navigate('Layout')}
+      />
+    );
+  }
+}
+
+class LayoutScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Layout',
+  };
+  render() {
+    const {navigate} = this.props.navigation;
+    return (
+      <Button
+        title="Go to Home Page"
+        onPress={() => navigate('Home')}
+      />
+    );
+  }
+}
+
+const MainNavigator = createStackNavigator({
+    Home: {screen: HomePage},
+    Layout: {screen: LayoutScreen},
+  }, {
+    initialRouteName: 'Home',
+  });
+
+const AppContainer = createAppContainer(MainNavigator);
+
+class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+};
+/*
+      onPress= () => {
       alert('Clicked')
+
+    onButtonPress() {
+    this.props.navigation.navigate('Second_screen');
+    }
+
+    <Button
+        title="Go to layout page"
+        onPress={() => navigate('Layout')}
+      />
+
+       onPress= () => {
+      const { navigate } = this.props.navigation;
+      navigate('Layout')
   }
 
-}
+ */
+
 
 // More info on all the options is below in the API Reference... just some common use cases shown here
 /*const options = {
@@ -193,51 +253,56 @@ export default  class Bible extends Component  {
 
   const styles = StyleSheet.create({
     bottomBar: {
+          flex: 1,
           flexDirection: 'row',
           //height: 60,
-          justifyContent:'space-between',
+          justifyContent:'center',
           //alignItems: 'center'
-          },
-    buttonBar: {
-          flex: 1,
-          justifyContent: 'space-between',
-          //alignItems: 'center'
+          //marginBottom: 40
           },
     purposeB: { 
           // marginLeft: 5,
           // marginRight: 5,
           // marginBottom: 15,
-          flex: 2, 
-          backgroundColor: '#d4d7dd', 
-          justifyContent: 'space-between',
+          flex: 1, 
+          //backgroundColor: '#d4d7dd', 
+          justifyContent: 'space-around',
+          flexDirection: 'row',
+          alignItems: 'center'
           },
     styleB: { 
           // marginLeft: 8,
           // marginRight: 8,
           // marginBottom: 8,
-          flex:  2, 
-          backgroundColor: '#738598', 
-          justifyContent: 'space-between',
+          flex:  1, 
+          //backgroundColor: '#738598', 
+          justifyContent: 'space-around',
+          flexDirection: 'row',
+          alignItems: 'center'
           },
     fontB: { 
           // marginLeft: 8,
           // marginRight: 8,
           // marginBottom: 8,
-          flex:  2, 
-          backgroundColor: '#3c4f65',
-          justifyContent: 'space-between',
+          flex:  1, 
+          //backgroundColor: '#3c4f65',
+          justifyContent: 'space-around',
+          flexDirection: 'row',
+          alignItems: 'center'
           },
     previewB: { 
           // marginLeft: 5,
           // marginRight: 5,
           // marginBottom: 15,
-          flex: 2, 
-          backgroundColor: '#f5c16c',
-          justifyContent: 'space-between',
+          flex: 1, 
+          //backgroundColor: '#f5c16c',
+          justifyContent: 'space-around',
+          flexDirection: 'row',
+          alignItems: 'center'
           },
     container: {
           //flex: 0.5,
-          //justifyContent: "center",
+          justifyContent: "center",
           //alignItems: 'center',
           backgroundColor: '#95adbe',
           //paddingLeft: 7,
@@ -261,7 +326,7 @@ export default  class Bible extends Component  {
           },
     verse: {
           fontSize: 17,
-          //justifyContent: "center",
+          //borderWidth:  1,
           textAlign: 'center',
           //alignItems: 'center',
           //backgroundColor: '#6e5773'
@@ -272,6 +337,7 @@ export default  class Bible extends Component  {
           //fontFamily: 'AmaticSC-Bold'
           },
     container3: {
+          flex: 1,
           fontSize: 15,
           //paddingBottom: 20,
           //justifyContent: "center",
@@ -295,11 +361,10 @@ export default  class Bible extends Component  {
         //position: 'absolute'
         flex: 1,
         flexDirection: 'row',
-        marginBottom: 10
-        
+        marginBottom: 10 
       },
       logo: {
-        justifyContent: 'center',
+        //justifyContent: 'center',
         alignItems: 'center',    
         paddingTop: 50,
         //paddingBottom: 4,
