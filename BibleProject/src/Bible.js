@@ -73,34 +73,6 @@ export default  class Bible extends Component  {
     });
   }
 
-  
-
-  /*handleChoosePhoto = () => {
-    console.log("pressed")
-    const options = {
-      noData: true
-      
-    };
-    ImagePicker.launchImageLibrary(options, response => {
-      console.log(response);
-      if (response.uri) {
-        this.setState({photo})
-      }
-    });
-  };*/
-
-  /*BibleVerses = () => {
-    return this.state.BibleData.verses.map((num) => {
-      return (
-        <View>
-          <Text style={styles.container}>Verse</Text>
-          <Text style={styles.container}>{num.text}</Text>
-        </View>
-        );
-      }
-    )
-  }*/
-
   render() {
     
     if (this.state.isLoading) {
