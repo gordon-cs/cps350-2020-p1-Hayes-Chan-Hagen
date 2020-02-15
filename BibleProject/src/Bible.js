@@ -16,6 +16,7 @@ import HomeScreen from './components/home';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
+
 export default  class Bible extends Component  {
 
     constructor(props)  {
@@ -24,8 +25,10 @@ export default  class Bible extends Component  {
             isLoading: true
       //Set up methods by binding this for them
     }
+
       this.getBibleApi = this.getBibleApi.bind(this);
       this.getBibleApi2 = this.getBibleApi2.bind(this);
+
     }
 
   /* Get real API data when component is first loaded.
@@ -79,6 +82,7 @@ export default  class Bible extends Component  {
 
       );
     } else {
+
       // Show data from API
       return (
         <View style={styles.container}>
@@ -95,6 +99,7 @@ export default  class Bible extends Component  {
 }
 
 
+
   
   const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen},
@@ -109,5 +114,6 @@ export default  class Bible extends Component  {
 });
 
 const AppContainer = createAppContainer(MainNavigator);
+
 
 
