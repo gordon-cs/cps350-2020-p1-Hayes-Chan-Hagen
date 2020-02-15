@@ -3,8 +3,8 @@
  */
 
 import React, { Component } from 'react';
-import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
-import logo from './images/logo.png';
+import { Image, Text, View } from 'react-native';
+
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import styles from './styles';
@@ -13,6 +13,8 @@ import style from './components/style';
 import font from './components/font';
 import preview from  './components/preview';
 import HomeScreen from './components/home';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 export default  class Bible extends Component  {
@@ -55,7 +57,7 @@ export default  class Bible extends Component  {
 
   getBibleApi2() {
     console.log("getBibleApi2 uses fetch.then.then.catch");
-    const BibleURL = 'https://bible-api.com/john%203:16';
+    //const BibleURL = 'https://bible-api.com/john%203:16';
       return fetch('https://bible-api.com/john%203:16')
         .then((response) => response.json())
         .then((responseJson) => { 
@@ -86,6 +88,8 @@ export default  class Bible extends Component  {
         <View style={styles.container}>
         
         <AppContainer/>   
+        <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
+              <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
            
              
         </View>
