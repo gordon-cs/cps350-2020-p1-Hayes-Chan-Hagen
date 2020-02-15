@@ -14,6 +14,7 @@ import font from './components/font';
 import preview from  './components/preview';
 import HomeScreen from './components/home';
 
+
 export default  class Bible extends Component  {
 
     constructor(props)  {
@@ -22,8 +23,10 @@ export default  class Bible extends Component  {
             isLoading: true
       //Set up methods by binding this for them
     }
+
       this.getBibleApi = this.getBibleApi.bind(this);
       this.getBibleApi2 = this.getBibleApi2.bind(this);
+
     }
 
   /* Get real API data when component is first loaded.
@@ -77,6 +80,7 @@ export default  class Bible extends Component  {
 
       );
     } else {
+
       // Show data from API
       return (
         <View style={styles.container}>
@@ -89,6 +93,7 @@ export default  class Bible extends Component  {
    }
   }
 }
+
 
 
   
@@ -105,5 +110,6 @@ export default  class Bible extends Component  {
 });
 
 const AppContainer = createAppContainer(MainNavigator);
+
 
 
