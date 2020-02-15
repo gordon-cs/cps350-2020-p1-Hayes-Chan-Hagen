@@ -12,6 +12,7 @@ import purpose from  './components/purpose';
 import style from './components/style';
 import font from './components/font';
 import preview from  './components/preview';
+import HomeScreen from './components/home';
 
 export default  class Bible extends Component  {
 
@@ -79,7 +80,8 @@ export default  class Bible extends Component  {
       // Show data from API
       return (
         <View style={styles.container}>
-        <AppContainer />   
+        
+        <AppContainer/>   
            
              
         </View>
@@ -88,28 +90,7 @@ export default  class Bible extends Component  {
   }
 }
 
-class HomeScreen extends React.Component {
-    static navigationOptions = {
-      title: 'Home',
-    };
-    render() {
-      const {navigate} = this.props.navigation;
-      return (
-        <Button
-          title="Purpose"
-          onPress={() => navigate('Button1')}
-        />
-      );
-    }
-  }
 
- 
-
-  
-
-
-
-  
   
   const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen},
