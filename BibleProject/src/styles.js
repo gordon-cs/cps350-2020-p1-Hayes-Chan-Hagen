@@ -1,6 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+    button: {
+          justifyContent: 'center',
+          alignSelf: 'center',
+          fontSize: 30,
+          borderWidth: 1,
+          padding: 15
+    },
     bottomBar: {
           flex: 1,
           flexDirection: 'row',
@@ -35,6 +42,16 @@ const styles = StyleSheet.create({
           backgroundColor: '#95adbe',
           flex: 1
           },
+    container2: {
+          justifyContent: "center",
+          backgroundColor: '#465881',
+          flex: .5
+          },
+    container4: {
+          justifyContent: "center",
+          backgroundColor: '#edf7fa',
+          flex: .5
+          },
     placeholder: {
           paddingTop: 280,
           paddingBottom: 20,
@@ -48,7 +65,7 @@ const styles = StyleSheet.create({
           fontSize: 17,
           textAlign: 'center',
           paddingLeft: 21,
-          paddingRight: 21,
+          paddingRight: 21
           },
     container3: {
           //flex: 1,

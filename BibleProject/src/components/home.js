@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Image, View, Text, StyleSheet } from 'react-native';
+import { Button, Image, View, Text } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import logo from './logo.png';
 import styles from '../styles';
+import Bible from '../Bible';
 
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
@@ -14,7 +15,9 @@ export default class HomeScreen extends React.Component {
       return (
         <View style = {styles.container}>
           <View style = {styles.logo}><Image source = {logo}/></View>
-            
+           
+            <Text>Hello!{this.props.bibleSource}</Text>
+               
                 <View style={styles.bottomBar}>
                 
                   <View style={styles.purposeB}>
@@ -45,8 +48,7 @@ export default class HomeScreen extends React.Component {
                 </View>
           
           </View>
-    
- 
+
        
       );
     }

@@ -15,3 +15,4 @@ export default class BibleApp extends Component {
     );
   }
 }
+

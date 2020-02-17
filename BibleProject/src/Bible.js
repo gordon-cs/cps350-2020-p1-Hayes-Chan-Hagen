@@ -13,6 +13,7 @@ import style from './components/style';
 import font from './components/font';
 import preview from  './components/preview';
 import HomeScreen from './components/home';
+import layout from './components/layout';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -22,13 +23,15 @@ export default  class Bible extends Component  {
     constructor(props)  {
         super(props);
         this.state  = {
-            isLoading: true
-      //Set up methods by binding this for them
+            isLoading: true,
+            avatarSource: null,
+      
+    //Set up methods by binding this for them
     }
 
       this.getBibleApi = this.getBibleApi.bind(this);
       this.getBibleApi2 = this.getBibleApi2.bind(this);
-
+      //this.bibleSource = this.bibleSource.bind(this);
     }
 
   /* Get real API data when component is first loaded.
@@ -71,6 +74,7 @@ export default  class Bible extends Component  {
     });
   }
 
+
   render() {
     
     if (this.state.isLoading) {
@@ -86,12 +90,8 @@ export default  class Bible extends Component  {
       // Show data from API
       return (
         <View style={styles.container}>
+        <AppContainer bibleSource={this.state.BibleData.text}/>   
         
-        <AppContainer/>   
-        <Text style = {styles.verse}>{this.state.BibleData.text}</Text>   
-              <Text style = {styles.container3}>{this.state.BibleData.reference}</Text>
-           
-             
         </View>
     );
    }
@@ -106,8 +106,8 @@ export default  class Bible extends Component  {
   Button1: {screen: purpose},
   Button2: {screen: style},
   Button3: {screen: font},
-  Button4: {screen: preview}
-
+  Button4: {screen: preview},
+  Button5: {screen: layout}
 }, 
 {
   initialRouteName: 'Home',
