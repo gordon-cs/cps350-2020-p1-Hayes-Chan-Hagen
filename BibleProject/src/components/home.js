@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Image, View, Text } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import logo from './logo.png';
+import logo from './images/logo.png';
 import styles from '../styles';
 import Bible from '../Bible';
 

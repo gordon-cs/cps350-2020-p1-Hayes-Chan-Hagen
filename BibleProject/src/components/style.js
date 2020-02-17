@@ -14,6 +14,7 @@ export default class screenTwo extends React.Component {
       const {navigate} = this.props.navigation;
       return (
         <View style={styles.container}>
+            
             <Button 
               title="Graphic Design"
               onPress={() => navigate('Button5')}/>
