@@ -13,11 +13,11 @@ import image6 from './images/image6.png';
 
 export default class screenFive extends React.Component {
     static navigationOptions = {
-      title: 'Layout',
+      title: 'Photography',
     };
     render() {
         return (
-            <View style={{justifyContent:"center",backgroundColor:"#fff",
+            <View style={{backgroundColor:"#fff",
             flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
       
             <Image source = {image1}/>

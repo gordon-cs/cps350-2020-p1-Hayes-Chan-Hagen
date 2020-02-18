@@ -13,7 +13,8 @@ import style from './components/style';
 import font from './components/font';
 import preview from  './components/preview';
 import HomeScreen from './components/home';
-import layout from './components/layout';
+import graphicDesign from './components/graphicDesign';
+import photography from './components/photography';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -107,7 +108,8 @@ export default  class Bible extends Component  {
   Button2: {screen: style},
   Button3: {screen: font},
   Button4: {screen: preview},
-  Button5: {screen: layout}
+  Button5: {screen: graphicDesign},
+  Button6: {screen: photography}
 }, 
 {
   initialRouteName: 'Home',

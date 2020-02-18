@@ -21,7 +21,7 @@ export default class screenTwo extends React.Component {
         
             <Button 
               title="Photography"
-              onPress={() => navigate('Button5')}/>
+              onPress={() => navigate('Button6')}/>
 
 
         
