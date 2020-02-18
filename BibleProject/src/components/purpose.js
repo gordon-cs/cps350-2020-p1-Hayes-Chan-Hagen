@@ -21,8 +21,8 @@ export default class screenOne extends React.Component {
                 borderWidth: 1,
                 padding: 15,
                 backgroundColor: '#95adbe'
-                }}
-              onPress={() => navigate('Button1')}>
+                }} //navigate needs to bring up check option for either going to share or create
+              onPress={() => navigate('Button1')}> 
               <Text style={{fontSize: 40 }}> Shareable </Text>
         </TouchableOpacity>
         
@@ -40,25 +40,19 @@ export default class screenOne extends React.Component {
         
         <View style={styles.bottomBar}>
                 
-                  <View style={styles.purposeB}>
+                  <View style={styles.buttonFormat}>
                       <Button
                         title="Purpose"
                         onPress={() => navigate('Button1')}/>
-                  </View>
-
-                  <View style={styles.styleB}>
+                
                       <Button
                         title="Style"
                         onPress={() => navigate('Button2')}/>
-                  </View>
-
-                  <View style={styles.fontB}>
+            
                       <Button
                         title="Font"
                         onPress={() => navigate('Button3')}/>
-                  </View>
-
-                  <View style={styles.fontB}>
+              
                       <Button
                         title="Preview"
                         onPress={() => navigate('Button4')}/>

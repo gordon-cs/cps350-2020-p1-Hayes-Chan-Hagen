@@ -10,6 +10,7 @@ export default class screenTwo extends React.Component {
     static navigationOptions = {
       title: 'Style',
     };
+    
     render() {
       const {navigate} = this.props.navigation;
       return (
@@ -43,25 +44,20 @@ export default class screenTwo extends React.Component {
         
         <View style={styles.bottomBar}>
                 
-                  <View style={styles.purposeB}>
+                  <View style={styles.buttonFormat}>
                       <Button
                         title="Purpose"
-                        onPress={() => navigate('Button1')}/>
-                  </View>
 
-                  <View style={styles.styleB}>
+                        onPress={() => navigate('Button1')}/>
+               
                       <Button
                         title="Style"
                         onPress={() => navigate('Button2')}/>
-                  </View>
-
-                  <View style={styles.fontB}>
+          
                       <Button
                         title="Font"
                         onPress={() => navigate('Button3')}/>
-                  </View>
-
-                  <View style={styles.fontB}>
+       
                       <Button
                         title="Preview"
                         onPress={() => navigate('Button4')}/>

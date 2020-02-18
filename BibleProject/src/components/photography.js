@@ -17,7 +17,8 @@ export default class screenFive extends React.Component {
     };
     render() {
         return (
-            <View style={{backgroundColor:"#fff",
+            <View style={styles.container}>
+            <View style={{backgroundColor: '#95adbe',
             flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
       
             <Image source = {image1}/>
@@ -26,7 +27,31 @@ export default class screenFive extends React.Component {
             <Image source = {image4}/>
             <Image source = {image5}/>
             <Image source = {image6}/>
+            
            
+          </View>
+
+          <View style={styles.bottomBar}>
+                
+          <View style={styles.buttonFormat}>
+               <Button
+                title="Purpose"
+                onPress={() => navigate('Button1')}/>
+
+               <Button
+                title="Style"
+                onPress={() => navigate('Button2')}/>
+
+               <Button
+                title="Font"
+                onPress={() => navigate('Button3')}/>
+
+               <Button
+                title="Preview"
+                onPress={() => navigate('Button4')}/>
+              </View>
+          </View>
+
           </View>
           )
       }

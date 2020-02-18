@@ -14,25 +14,19 @@ export default class screenThree extends React.Component {
 
         <View style={styles.bottomBar}>
                 
-                  <View style={styles.purposeB}>
+                  <View style={styles.buttonFormat}>
                       <Button
                         title="Purpose"
                         onPress={() => navigate('Button1')}/>
-                  </View>
-
-                  <View style={styles.styleB}>
+                
                       <Button
                         title="Style"
                         onPress={() => navigate('Button2')}/>
-                  </View>
-
-                  <View style={styles.fontB}>
+                
                       <Button
                         title="Font"
                         onPress={() => navigate('Button3')}/>
-                  </View>
-
-                  <View style={styles.fontB}>
+             
                       <Button
                         title="Preview"
                         onPress={() => navigate('Button4')}/>

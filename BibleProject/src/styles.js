@@ -21,25 +21,7 @@ const styles = StyleSheet.create({
           flexDirection: 'row',
           justifyContent:'center',
           },
-    purposeB: { 
-          flex: 1, 
-          justifyContent: 'space-around',
-          flexDirection: 'row',
-          alignItems: 'center'
-          },
-    styleB: { 
-          flex:  1, 
-          justifyContent: 'space-around',
-          flexDirection: 'row',
-          alignItems: 'center'
-          },
-    fontB: { 
-          flex:  1, 
-          justifyContent: 'space-around',
-          flexDirection: 'row',
-          alignItems: 'center'
-          },
-    previewB: { 
+    buttonFormat: { 
           flex: 1, 
           justifyContent: 'space-around',
           flexDirection: 'row',

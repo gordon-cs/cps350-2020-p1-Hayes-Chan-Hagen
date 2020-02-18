@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, Image, Dimensions } from 'react-native';
+import { Button, View, Text, Image, Dimensions, FlatList } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles'; 
@@ -10,6 +10,9 @@ import background4 from './images/background4.png';
 import background5 from './images/background5.png';
 import background6 from './images/background6.png';
 
+const images = {
+  
+}
 
 
 export default class screenSix extends React.Component {
@@ -18,10 +21,11 @@ export default class screenSix extends React.Component {
     };
     render() {
         return (
+          
+          <View style={styles.container}>
 
-          <View style={{backgroundColor:"#fff", flex: 1, justifyContent: 'space-around',
-            flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center', 
-            width: Dimensions.get('window').width}}>
+          <View style={{backgroundColor:"#95adbe", flex: 1, justifyContent: 'space-around',
+            flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
       
             <Image source = {background1}/>
             <Image source = {background2}/>
@@ -32,7 +36,31 @@ export default class screenSix extends React.Component {
            
           </View>
 
-           
+           <View style={styles.bottomBar}>
+                
+          <View style={styles.buttonFormat}>
+               <Button
+                title="Purpose"
+                onPress={() => navigate('Button1')}/>
+
+               <Button
+                title="Style"
+                onPress={() => navigate('Button2')}/>
+
+               <Button
+                title="Font"
+                onPress={() => navigate('Button3')}/>
+
+               <Button
+                title="Preview"
+                onPress={() => navigate('Button4')}/>
+              </View>
+          </View>
+
+          </View>
           );
       }
   }
+
+
+  //width: Dimensions.get('window').width}}

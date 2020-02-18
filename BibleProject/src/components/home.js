@@ -20,7 +20,7 @@ export default class HomeScreen extends React.Component {
                
                 <View style={styles.bottomBar}>
                 
-                  <View style={styles.purposeB}>
+                  <View style={styles.buttonFormat}>
                       <TouchableOpacity
                       style={styles.beginButton}
                       onPress={() => navigate('Button1')}>
