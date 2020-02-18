@@ -6,8 +6,16 @@ const styles = StyleSheet.create({
           alignSelf: 'center',
           fontSize: 30,
           borderWidth: 1,
-          padding: 15
-    },
+          padding: 15,
+          },
+    beginButton: {
+          justifyContent: 'center',
+          alignSelf: 'center',
+          fontSize: 30,
+          borderWidth: 1,
+          padding: 15,
+          backgroundColor: 'white'
+          },
     bottomBar: {
           flex: 1,
           flexDirection: 'row',

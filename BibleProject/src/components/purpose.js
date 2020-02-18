@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, View, Text, TouchableOpacity } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
@@ -13,11 +13,30 @@ export default class screenOne extends React.Component {
       return (
         
         <View style={styles.container}>
-        <Text style={styles.button}>Shareable</Text>
-       
-        <View style={styles.container2}>
-        <Text style={styles.button}>Screensaver</Text>
-        </View>
+
+        <TouchableOpacity
+              style={{
+                justifyContent: 'center',
+                alignSelf: 'center',
+                borderWidth: 1,
+                padding: 15,
+                backgroundColor: '#95adbe'
+                }}
+              onPress={() => navigate('Button1')}>
+              <Text style={{fontSize: 40 }}> Shareable </Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity
+              style={{
+                justifyContent: 'center',
+                alignSelf: 'center',
+                borderWidth: 1,
+                padding: 15,
+                backgroundColor: '#27496d'
+                }}
+              onPress={() => navigate('Button1')}>
+              <Text style={{fontSize: 40 }}> Screensaver </Text>
+        </TouchableOpacity>
         
         <View style={styles.bottomBar}>
                 

@@ -14,15 +14,31 @@ export default class screenTwo extends React.Component {
       const {navigate} = this.props.navigation;
       return (
         <View style={styles.container}>
-            
-            <Button 
-              title="Graphic Design"
-              onPress={() => navigate('Button5')}/>
         
-            <Button 
-              title="Photography"
-              onPress={() => navigate('Button6')}/>
+        <TouchableOpacity
+              style={{
+                justifyContent: 'center',
+                alignSelf: 'center',
+                borderWidth: 1,
+                padding: 15,
+                backgroundColor: '#95adbe'
+                }}
+              onPress={() => navigate('Button5')}>
+              <Text style={{fontSize: 40 }}> Graphic Design </Text>
+        </TouchableOpacity>
 
+        
+        <TouchableOpacity
+              style={{
+                justifyContent: 'center',
+                alignSelf: 'center',
+                borderWidth: 1,
+                padding: 15,
+                backgroundColor: '#e1f2fb'
+                }}
+              onPress={() => navigate('Button6')}>
+              <Text style={{fontSize: 40 }}> Photography </Text>
+        </TouchableOpacity>
 
         
         <View style={styles.bottomBar}>

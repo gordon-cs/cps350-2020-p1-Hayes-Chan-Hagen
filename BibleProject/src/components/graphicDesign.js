@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, Image } from 'react-native';
+import { Button, View, Text, Image, Dimensions } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles'; 
@@ -18,8 +18,10 @@ export default class screenSix extends React.Component {
     };
     render() {
         return (
-            <View style={{backgroundColor:"#fff",
-            flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
+
+          <View style={{backgroundColor:"#fff", flex: 1, justifyContent: 'space-around',
+            flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center', 
+            width: Dimensions.get('window').width}}>
       
             <Image source = {background1}/>
             <Image source = {background2}/>
@@ -29,6 +31,8 @@ export default class screenSix extends React.Component {
             <Image source = {background6}/>
            
           </View>
-          )
+
+           
+          );
       }
   }
