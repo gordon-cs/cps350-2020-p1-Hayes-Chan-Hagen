@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, TouchableOpacity } from 'react-native';
+import { Button, View, Text, TouchableOpacity, Dimensions } from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
@@ -12,33 +12,33 @@ export default class screenOne extends React.Component {
       const {navigate} = this.props.navigation;
       return (
         
-        <View style={styles.container}>
+        <View style={{flex: 1, backgroundColor: '#95adbe'}}>
 
         <TouchableOpacity
               style={{
+                flex: 4,
                 justifyContent: 'center',
                 alignSelf: 'center',
-                borderWidth: 1,
-                padding: 15,
-                backgroundColor: '#95adbe'
                 }} //navigate needs to bring up check option for either going to share or create
               onPress={() => navigate('Button1')}> 
-              <Text style={{fontSize: 40 }}> Shareable </Text>
+              <Text style={{fontSize: 40, backgroundColor: '#95adbe',
+              textAlign: 'center', borderWidth: 1 }}> Shareable </Text>
         </TouchableOpacity>
         
         <TouchableOpacity
               style={{
+                flex: 4,
                 justifyContent: 'center',
                 alignSelf: 'center',
-                borderWidth: 1,
-                padding: 15,
-                backgroundColor: '#27496d'
+                backgroundColor: '#465881',
+                width: Dimensions.get('window').width,
                 }}
               onPress={() => navigate('Button1')}>
-              <Text style={{fontSize: 40 }}> Screensaver </Text>
+              <Text style={{fontSize: 40, backgroundColor: '#465881',
+              textAlign: 'center', borderWidth: 1, marginLeft: 80, marginRight: 80  }}> Screensaver </Text>
         </TouchableOpacity>
         
-        <View style={styles.bottomBar}>
+        
                 
                   <View style={styles.buttonFormat}>
                       <Button
@@ -58,7 +58,7 @@ export default class screenOne extends React.Component {
                         onPress={() => navigate('Button4')}/>
                   </View>
              </View>
-         </View>
+         
       );
     }
   }

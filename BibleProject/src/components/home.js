@@ -10,12 +10,18 @@ export default class HomeScreen extends React.Component {
     static navigationOptions = {
       title: 'Home',
     };
+
+    /*passData() {
+      this.props.dataPassing(this.state.newInfo);
+    }*/
+    
+
     render() {
       const {navigate} = this.props.navigation;
       return (
         <View style = {styles.container}>
           <View style = {styles.logo}><Image source = {logo}/></View>
-           
+           <View>{this.props.data}</View>
             <Text>Hello!{this.props.bibleSource}</Text>
                
                 <View style={styles.bottomBar}>

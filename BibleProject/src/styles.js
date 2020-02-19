@@ -28,8 +28,11 @@ const styles = StyleSheet.create({
           alignItems: 'center'
           },
     container: {
-          justifyContent: "center",
           backgroundColor: '#95adbe',
+          flex: 1
+          },
+    box: {
+          backgroundColor: '#465881',
           flex: 1
           },
     container2: {

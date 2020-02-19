@@ -10,9 +10,6 @@ import background4 from './images/background4.png';
 import background5 from './images/background5.png';
 import background6 from './images/background6.png';
 
-const images = {
-  
-}
 
 
 export default class screenSix extends React.Component {

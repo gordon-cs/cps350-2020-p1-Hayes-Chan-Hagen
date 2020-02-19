@@ -25,7 +25,6 @@ export default  class Bible extends Component  {
         super(props);
         this.state  = {
             isLoading: true,
-            avatarSource: null,
       
     //Set up methods by binding this for them
     }
@@ -76,6 +75,14 @@ export default  class Bible extends Component  {
   }
 
 
+  
+  /*passingData = (newInfo) => {
+    this.setState({
+        data: newInfo
+    });
+  }*/
+
+
   render() {
     
     if (this.state.isLoading) {
@@ -91,8 +98,8 @@ export default  class Bible extends Component  {
       // Show data from API
       return (
         <View style={styles.container}>
-        <AppContainer bibleSource={this.state.BibleData.text}/>   
-        
+        <View data = {this.state.data}/>
+        <AppContainer bibleSource = {this.state.BibleData.text}/>
         </View>
     );
    }
