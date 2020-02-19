@@ -22,6 +22,7 @@ export default class screenSix extends React.Component {
           <View style={{flex: 1, backgroundColor: '#95adbe'}}>
 
             <View style={{
+                paddingTop: 12,
                 flex: 1.5,
                 flexDirection: 'row',
                 alignContent: 'space-around',
@@ -36,6 +37,7 @@ export default class screenSix extends React.Component {
 
 
             <View style={{
+                paddingTop: 12,
                 flex: 1.5,
                 flexDirection: 'row',
                 alignContent: 'space-around',
@@ -50,6 +52,7 @@ export default class screenSix extends React.Component {
 
 
             <View style={{
+                paddingTop: 12,
                 flex: 1.5,
                 flexDirection: 'row',
                 alignContent: 'space-around',
