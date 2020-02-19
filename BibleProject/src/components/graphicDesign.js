@@ -29,8 +29,8 @@ export default class screenSix extends React.Component {
                 //flexWrap: 'wrap'
                 }}>
                 
-               <Image source = {background1} style={{ width: 100, height: 200 }}/>
-               <Image source = {background2} style={{ width: 100, height: 200 }}/>
+               <Image source = {background1} style={{ width: 100, height: 180 }}/>
+               <Image source = {background2} style={{ width: 100, height: 180 }}/>
             </View>
 
 
@@ -43,8 +43,8 @@ export default class screenSix extends React.Component {
                 //flexWrap: 'wrap'
                 }}>
 
-                <Image source = {background3} style={{ width: 100, height: 200 }}/>
-                <Image source = {background4} style={{ width: 100, height: 200 }}/>
+                <Image source = {background3} style={{ width: 100, height: 180 }}/>
+                <Image source = {background4} style={{ width: 100, height: 180 }}/>
             </View>
 
 
@@ -57,30 +57,35 @@ export default class screenSix extends React.Component {
                 //flexWrap: 'wrap'
                 }}>
 
-                <Image source = {background5} style={{ width: 100, height: 200 }}/>
-                <Image source = {background6} style={{ width: 100, height: 200 }}/>
+                <Image source = {background5} style={{ width: 100, height: 180 }}/>
+                <Image source = {background6} style={{ width: 100, height: 180 }}/>
             </View>
 
 
                 
-          <View style={styles.buttonFormat}>
-               <Button
-                title="Purpose"
-                onPress={() => navigate('Button1')}/>
-
-               <Button
-                title="Style"
-                onPress={() => navigate('Button2')}/>
-
-               <Button
-                title="Font"
-                onPress={() => navigate('Button3')}/>
-
-               <Button
-                title="Preview"
-                onPress={() => navigate('Button4')}/>
-              </View>
-          </View>
+            <View style={styles.buttonFormat}>
+                      <Button
+                        title="Purpose"
+                        color = '#d4d7dd'
+                        onPress={() => navigate('Button1')}/>
+                
+                      <Button
+                        title="Style"
+                        color = '#738598'
+                        onPress={() => navigate('Button2')}/>
+            
+                      <Button
+                        title="Font"
+                        color = '#3c4f65'
+                        onPress={() => navigate('Button3')}/>
+              
+                      <Button
+                        title="Preview"
+                        color = '#f5c16c'
+                        onPress={() => navigate('Button4')}/>
+                        
+                  </View>
+             </View>
 
      
           );

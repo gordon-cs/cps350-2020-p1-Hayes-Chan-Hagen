@@ -19,13 +19,12 @@ export default class HomeScreen extends React.Component {
     render() {
       const {navigate} = this.props.navigation;
       return (
-        <View style = {styles.container}>
+        <View style={{flex: 1, backgroundColor: '#95adbe'}}>
           <View style = {styles.logo}><Image source = {logo}/></View>
            <View>{this.props.data}</View>
             <Text>Hello!{this.props.bibleSource}</Text>
                
-                <View style={styles.bottomBar}>
-                
+
                   <View style={styles.buttonFormat}>
                       <TouchableOpacity
                       style={styles.beginButton}
@@ -33,9 +32,6 @@ export default class HomeScreen extends React.Component {
                       <Text> CLICK TO BEGIN DESIGNING </Text>
                       </TouchableOpacity>
                   </View>
-                 
-                </View>
-          
           </View>
 
        
