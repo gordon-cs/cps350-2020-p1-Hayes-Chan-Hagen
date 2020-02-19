@@ -74,7 +74,16 @@ export default  class Bible extends Component  {
     });
   }
 
-
+  BibleVerses = () => {
+    return this.state.BibleData.text(() => {
+      return (
+        <View>
+          <Text style={styles.container}>{text}</Text>
+        </View>
+         );
+        }
+      )
+    }
   
   /*passingData = (newInfo) => {
     this.setState({

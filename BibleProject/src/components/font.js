@@ -23,7 +23,7 @@ export default class screenThree extends React.Component {
                 }} //navigate needs to bring up check option for either going to share or create
               onPress={() => navigate('Button3')}>
               <Text style={{fontSize: 20, textAlign: 'center'}}>Caligraphy</Text>
-              <Text style={{fontSize: 22, backgroundColor: '#95adbe', textAlign: 'center',
+              <Text style={{fontSize: 22, fontFamily: 'Kindly Jasmine', backgroundColor: '#95adbe', textAlign: 'center',
                 borderWidth: 1 }}> Kindly Jasmine </Text>
               <View style={{
                 flex: 1, 
