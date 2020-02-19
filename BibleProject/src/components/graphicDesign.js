@@ -19,21 +19,49 @@ export default class screenSix extends React.Component {
     render() {
         return (
           
-          <View style={styles.container}>
+          <View style={{flex: 1, backgroundColor: '#95adbe'}}>
 
-          <View style={{backgroundColor:"#95adbe", flex: 1, justifyContent: 'space-around',
-            flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start'}}>
-      
-            <Image source = {background1}/>
-            <Image source = {background2}/>
-            <Image source = {background3}/>
-            <Image source = {background4}/>
-            <Image source = {background5}/>
-            <Image source = {background6}/>
-           
-          </View>
+            <View style={{
+                flex: 1.5,
+                flexDirection: 'row',
+                alignContent: 'space-around',
+                alignSelf: 'center',
+                //flexWrap: 'wrap'
+                }}>
+                
+               <Image source = {background1} style={{ width: 100, height: 200 }}/>
+               <Image source = {background2} style={{ width: 100, height: 200 }}/>
+            </View>
 
-           <View style={styles.bottomBar}>
+
+
+            <View style={{
+                flex: 1.5,
+                flexDirection: 'row',
+                alignContent: 'space-around',
+                alignSelf: 'center',
+                //flexWrap: 'wrap'
+                }}>
+
+                <Image source = {background3} style={{ width: 100, height: 200 }}/>
+                <Image source = {background4} style={{ width: 100, height: 200 }}/>
+            </View>
+
+
+
+            <View style={{
+                flex: 1.5,
+                flexDirection: 'row',
+                alignContent: 'space-around',
+                alignSelf: 'center',
+                //flexWrap: 'wrap'
+                }}>
+
+                <Image source = {background5} style={{ width: 100, height: 200 }}/>
+                <Image source = {background6} style={{ width: 100, height: 200 }}/>
+            </View>
+
+
                 
           <View style={styles.buttonFormat}>
                <Button
@@ -54,7 +82,7 @@ export default class screenSix extends React.Component {
               </View>
           </View>
 
-          </View>
+     
           );
       }
   }
