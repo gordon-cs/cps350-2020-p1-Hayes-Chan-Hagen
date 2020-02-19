@@ -35,7 +35,7 @@ export default class screenOne extends React.Component {
                 }}
               onPress={() => navigate('Button1')}>
               <Text style={{fontSize: 40, backgroundColor: '#465881',
-              textAlign: 'center', borderWidth: 1, marginLeft: 80, marginRight: 80  }}> Screensaver </Text>
+              textAlign: 'center', borderWidth: 1, marginLeft: 80, marginRight: 80 }}> Screensaver </Text>
         </TouchableOpacity>
         
         
@@ -43,18 +43,22 @@ export default class screenOne extends React.Component {
                   <View style={styles.buttonFormat}>
                       <Button
                         title="Purpose"
+                        color = '#d4d7dd'
                         onPress={() => navigate('Button1')}/>
                 
                       <Button
                         title="Style"
+                        color = '#738598'
                         onPress={() => navigate('Button2')}/>
             
                       <Button
                         title="Font"
+                        color = '#3c4f65'
                         onPress={() => navigate('Button3')}/>
               
                       <Button
                         title="Preview"
+                        color = '#f5c16c'
                         onPress={() => navigate('Button4')}/>
                   </View>
              </View>
