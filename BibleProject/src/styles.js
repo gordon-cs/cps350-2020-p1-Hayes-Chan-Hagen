@@ -28,6 +28,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  imageFormat: {
+    flex: 5,
+    flexDirection: 'row',
+    marginVertical: 25,
+    justifyContent: 'center',
+  },
   container: {
     backgroundColor: '#95adbe',
     flex: 1,
@@ -53,7 +59,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingLeft: 7,
     paddingRight: 7,
-    //fontFamily: 'AmaticSC-Regular',   //how to add fonts
   },
   verse: {
     fontSize: 17,

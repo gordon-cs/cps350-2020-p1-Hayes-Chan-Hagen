@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {Button, View, Text, Image} from 'react-native';
+import {Button, View, Text, Image, TouchableOpacity} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import ImagePicker from 'react-native-image-picker';
 import styles from '../styles';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
@@ -11,74 +12,101 @@ import image5 from './images/image5.png';
 import image6 from './images/image6.png';
 
 export default class screenFive extends React.Component {
+  handleChoosePhoto = () => {
+    const options = {};
+    ImagePicker.launchImageLibrary(ptions, response => {
+      console.log('response', response);
+    });
+  };
+
   static navigationOptions = {
     title: 'Photography',
   };
   render() {
     return (
       <View style={{flex: 1, backgroundColor: '#e1f2fb'}}>
-        <View
-          style={{
-            paddingTop: 12,
-            flex: 1.5,
-            flexDirection: 'row',
-            alignContent: 'space-around',
-            alignSelf: 'center',
-            //flexWrap: 'wrap'
-          }}>
-          <Image source={image1} style={{width: 100, height: 180}} />
-          <Image source={image2} style={{width: 100, height: 180}} />
+        <View style={styles.imageFormat}>
+          <TouchableOpacity>
+            <Image
+              source={image1}
+              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Image
+              source={image2}
+              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
+            />
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.imageFormat}>
+          <TouchableOpacity>
+            <Image
+              source={image3}
+              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Image
+              source={image4}
+              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
+            />
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.imageFormat}>
+          <TouchableOpacity>
+            <Image
+              source={image5}
+              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Image
+              source={image6}
+              style={{
+                marginRight: 60,
+                marginLeft: 60,
+                width: 100,
+                height: 180,
+              }}
+            />
+          </TouchableOpacity>
         </View>
 
         <View
           style={{
-            paddingTop: 12,
-            flex: 1.5,
+            flex: 2,
+            justifyContent: 'space-around',
             flexDirection: 'row',
-            alignContent: 'space-around',
-            alignSelf: 'center',
-            //flexWrap: 'wrap'
+            alignItems: 'center',
           }}>
-          <Image source={image3} style={{width: 100, height: 180}} />
-          <Image source={image4} style={{width: 100, height: 180}} />
-        </View>
-
-        <View
-          style={{
-            paddingTop: 12,
-            flex: 1.5,
-            flexDirection: 'row',
-            alignContent: 'space-around',
-            alignSelf: 'center',
-            //flexWrap: 'wrap'
-          }}>
-          <Image source={image5} style={{width: 100, height: 180}} />
-          <Image source={image6} style={{width: 100, height: 180}} />
-        </View>
-
-        <View style={styles.buttonFormat}>
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => navigate('Button1')}
+            onPress={() => this.props.navigation.navigate('Button1')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => navigate('Button2')}
+            onPress={() => this.props.navigation.navigate('Button2')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => navigate('Button3')}
+            onPress={() => this.props.navigation.navigate('Button3')}
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => navigate('Button4')}
+            onPress={() => this.props.navigation.navigate('Button4')}
           />
         </View>
       </View>

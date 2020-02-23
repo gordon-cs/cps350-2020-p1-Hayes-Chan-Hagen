@@ -25,6 +25,8 @@
 		A439BBE0FA384971A49B44B1 /* Cinzel-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CA29FC8E58D48EBBC04EE02 /* Cinzel-Bold.ttf */; };
 		2CD81CB14D5D4563B269FAFB /* Cinzel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B0C09AA94E46F3A1ED2C3B /* Cinzel-Regular.ttf */; };
 		1185688E07A84E29875125A8 /* DancingScript-VariableFont:wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70462D6E6FD4F9B9AC5CD48 /* DancingScript-VariableFont:wght.ttf */; };
+		A5A61A1C149645A2B8270C7A /* Kindly Jasmine.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D5D8A59C92411087107762 /* Kindly Jasmine.ttf */; };
+		4FDD7E9C7D544599BE1C1A82 /* Searocks OTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691533E34984B6B9740ABCD /* Searocks OTF.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		5CA29FC8E58D48EBBC04EE02 /* Cinzel-Bold.ttf */ = {isa = PBXFileReference; name = "Cinzel-Bold.ttf"; path = "../assets/fonts/Cinzel-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		E1B0C09AA94E46F3A1ED2C3B /* Cinzel-Regular.ttf */ = {isa = PBXFileReference; name = "Cinzel-Regular.ttf"; path = "../assets/fonts/Cinzel-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A70462D6E6FD4F9B9AC5CD48 /* DancingScript-VariableFont:wght.ttf */ = {isa = PBXFileReference; name = "DancingScript-VariableFont:wght.ttf"; path = "../assets/fonts/DancingScript-VariableFont:wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0D5D8A59C92411087107762 /* Kindly Jasmine.ttf */ = {isa = PBXFileReference; name = "Kindly Jasmine.ttf"; path = "../assets/fonts/Kindly Jasmine.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E691533E34984B6B9740ABCD /* Searocks OTF.ttf */ = {isa = PBXFileReference; name = "Searocks OTF.ttf"; path = "../assets/fonts/Searocks OTF.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,8 @@
 				5CA29FC8E58D48EBBC04EE02 /* Cinzel-Bold.ttf */,
 				E1B0C09AA94E46F3A1ED2C3B /* Cinzel-Regular.ttf */,
 				A70462D6E6FD4F9B9AC5CD48 /* DancingScript-VariableFont:wght.ttf */,
+				C0D5D8A59C92411087107762 /* Kindly Jasmine.ttf */,
+				E691533E34984B6B9740ABCD /* Searocks OTF.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -367,6 +373,8 @@
 				A439BBE0FA384971A49B44B1 /* Cinzel-Bold.ttf in Resources */,
 				2CD81CB14D5D4563B269FAFB /* Cinzel-Regular.ttf in Resources */,
 				1185688E07A84E29875125A8 /* DancingScript-VariableFont:wght.ttf in Resources */,
+				A5A61A1C149645A2B8270C7A /* Kindly Jasmine.ttf in Resources */,
+				4FDD7E9C7D544599BE1C1A82 /* Searocks OTF.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
 
 export default class screenThree extends React.Component {
@@ -15,15 +13,15 @@ export default class screenThree extends React.Component {
         <TouchableOpacity
           style={{
             flex: 4,
-            //justifyContent: 'center',
+
             alignSelf: 'center',
             paddingTop: 10,
-          }} //navigate needs to bring up check option for either going to share or create
+          }}
           onPress={() => navigate('Button3')}>
-          <Text style={{fontSize: 20, textAlign: 'center'}}>Caligraphy</Text>
+          <Text style={{fontSize: 25, textAlign: 'center'}}>Caligraphy</Text>
           <Text
             style={{
-              fontSize: 22,
+              fontSize: 30,
               fontFamily: 'Kindly Jasmine',
               backgroundColor: '#95adbe',
               textAlign: 'center',
@@ -37,13 +35,15 @@ export default class screenThree extends React.Component {
               flex: 1,
               flexDirection: 'row',
               aspectRatio: 1,
-              //borderWidth: 1
-              //justifyContent: 'space-around',
-              //alignSelf: 'center',
             }}>
             <Text
-              style={{fontSize: 30, textAlign: 'center', alignSelf: 'center'}}>
-              ABCDEFGHIJKLMNOPQRSTUVWXYZ
+              style={{
+                fontSize: 40,
+                textAlign: 'center',
+                alignSelf: 'center',
+                fontFamily: 'Kindly Jasmine',
+              }}>
+              AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
             </Text>
           </View>
         </TouchableOpacity>
@@ -58,12 +58,13 @@ export default class screenThree extends React.Component {
             paddingTop: 10,
           }}
           onPress={() => navigate('Button3')}>
-          <Text style={{fontSize: 20, textAlign: 'center'}}>Simple</Text>
+          <Text style={{fontSize: 25, textAlign: 'center'}}>Simple</Text>
           <Text
             style={{
-              fontSize: 22,
+              fontSize: 30,
               backgroundColor: '#465881',
               textAlign: 'center',
+              fontFamily: 'Searocks OTF',
               borderWidth: 1,
               marginLeft: 110,
               marginRight: 110,
@@ -75,20 +76,17 @@ export default class screenThree extends React.Component {
             style={{
               flex: 1,
               flexDirection: 'row',
-              aspectRatio: 1,
-              //borderWidth: 1
-              //justifyContent: 'space-around',
-              //alignSelf: 'center',
+              marginLeft: 120,
+              marginRight: 120,
             }}>
             <Text
               style={{
-                fontSize: 30,
+                fontSize: 40,
                 textAlign: 'center',
                 alignSelf: 'center',
-                marginLeft: 11,
-                marginRight: 11,
+                fontFamily: 'Searocks OTF',
               }}>
-              ABCDEFGHIJKLMNOPQRSTUVWXYZ
+              AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
             </Text>
           </View>
         </TouchableOpacity>

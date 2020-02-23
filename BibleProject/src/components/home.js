@@ -1,7 +1,7 @@
 /*
  * Got help from Dr. Tuck and Jahnuel
  */
-import React, {Component} from 'react';
+import React, {Component, AsyncStorage} from 'react';
 import {Image, View, Text, TouchableOpacity} from 'react-native';
 import styles from '../styles';
 import DailyVerse from './dailyVerse';
