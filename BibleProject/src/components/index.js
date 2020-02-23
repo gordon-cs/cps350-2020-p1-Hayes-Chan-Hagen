@@ -9,9 +9,9 @@ export default class index extends Component {
     super(props);
     this.state = {
       isLoading: true,
-    };
 
-    //Set up methods by binding this for them
+      //Set up methods by binding this for them
+    };
     this.getBibleApi = this.getBibleApi.bind(this);
     this.getBibleApi2 = this.getBibleApi2.bind(this);
   }
@@ -23,6 +23,8 @@ export default class index extends Component {
    */
   componentDidMount() {
     this.getBibleApi2();
+    console.log('Props:  ', this.props);
+    //this.passInfo();
   }
 
   async getBibleApi() {
@@ -71,12 +73,11 @@ export default class index extends Component {
       );
     } else {
       return (
-        <View style={{flex: 1, backgroundColor: '#95adbe'}}>
+        <View style={{flex: 1}}>
           <View style={{flex: 4}}>
             <Image
               resizeMode={'contain'}
               style={{
-                marginTop: 50,
                 height: 400,
                 width: 400,
                 marginVertical: 20,
@@ -91,19 +92,12 @@ export default class index extends Component {
             <BibleRef
               bibleReference={this.state.BibleData.verse.details.reference}
             />
-            <View
-              style={{
-                flex: 3,
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-              }}
-            />
           </View>
-          <View style={{flex: 1, flexDirection: 'row', alignSelf: 'center'}}>
+          <View style={{flex: 1}}>
             <TouchableOpacity
               style={styles.beginButton}
               onPress={() => this.props.navigation.navigate('Button1')}>
-              <Text style={{fontSize: 20}}> CLICK TO BEGIN DESIGNING </Text>
+              <Text> CLICK TO BEGIN DESIGNING </Text>
             </TouchableOpacity>
           </View>
         </View>
