@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Text, Image, TouchableOpacity} from 'react-native';
+import {Button, View, Image, TouchableOpacity} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import ImagePicker from 'react-native-image-picker';
@@ -16,17 +16,31 @@ export default class photography extends React.Component {
     title: 'Photography',
   };
   render() {
+    const {navigate} = this.props.navigation;
+    const bibleApiPhoto = this.props.navigation.getParam('bibleApiDesign');
     return (
       <View style={{flex: 1, backgroundColor: '#e1f2fb'}}>
         <View style={styles.imageFormat}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                photo: image1,
+                bibleApiPreview: bibleApiPhoto,
+              });
+            }}>
             <Image
               source={image1}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                photo: image2,
+                bibleApiPreview: bibleApiPhoto,
+              });
+            }}>
             <Image
               source={image2}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
@@ -35,14 +49,26 @@ export default class photography extends React.Component {
         </View>
 
         <View style={styles.imageFormat}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                photo: image3,
+                bibleApiPreview: bibleApiPhoto,
+              });
+            }}>
             <Image
               source={image3}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                photo: image4,
+                bibleApiPreview: bibleApiPhoto,
+              });
+            }}>
             <Image
               source={image4}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
@@ -51,14 +77,26 @@ export default class photography extends React.Component {
         </View>
 
         <View style={styles.imageFormat}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                photo: image5,
+                bibleApiPreview: bibleApiPhoto,
+              });
+            }}>
             <Image
               source={image5}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                photo: image6,
+                bibleApiPreview: bibleApiPhoto,
+              });
+            }}>
             <Image
               source={image6}
               style={{
