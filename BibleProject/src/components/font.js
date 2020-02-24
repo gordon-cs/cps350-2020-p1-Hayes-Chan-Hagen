@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import styles from '../styles';
 
-export default class screenThree extends React.Component {
+export default class font extends React.Component {
   static navigationOptions = {
     title: 'Font',
   };
@@ -13,7 +13,6 @@ export default class screenThree extends React.Component {
         <TouchableOpacity
           style={{
             flex: 4,
-
             alignSelf: 'center',
             paddingTop: 10,
           }}

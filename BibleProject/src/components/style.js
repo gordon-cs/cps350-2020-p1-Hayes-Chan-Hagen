@@ -5,6 +5,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
 import ImagePicker from 'react-native-image-picker';
 
+
 export default class style extends React.Component {
   static navigationOptions = {
     title: 'Style',
@@ -12,6 +13,8 @@ export default class style extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
+    const bibleApiFont = this.props.navigation.getParam('bibleApiStyle');
+    console.log(bibleApiFont)
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -20,7 +23,7 @@ export default class style extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Button5')}>
+          onPress={() => navigate('Graphic', {bibleApiDesign: bibleApiFont})}>
           <Text
             style={{
               fontSize: 40,
@@ -41,7 +44,7 @@ export default class style extends React.Component {
             backgroundColor: '#e1f2fb',
             width: Dimensions.get('window').width,
           }}
-          onPress={() => navigate('Button6')}>
+          onPress={() => navigate('Photo', {bibleApiDesign: bibleApiFont})}>
           <Text
             style={{
               fontSize: 40,
@@ -60,25 +63,25 @@ export default class style extends React.Component {
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => navigate('Button1')}
+            onPress={() => navigate('Purpose')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => navigate('Button2')}
+            onPress={() => navigate('Style')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => navigate('Button3')}
+            onPress={() => navigate('Font')}
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => navigate('Button4')}
+            onPress={() => navigate('Preview')}
           />
         </View>
       </View>

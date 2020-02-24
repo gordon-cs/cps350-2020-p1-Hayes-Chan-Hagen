@@ -11,14 +11,7 @@ import image4 from './images/image4.png';
 import image5 from './images/image5.png';
 import image6 from './images/image6.png';
 
-export default class screenFive extends React.Component {
-  handleChoosePhoto = () => {
-    const options = {};
-    ImagePicker.launchImageLibrary(ptions, response => {
-      console.log('response', response);
-    });
-  };
-
+export default class photography extends React.Component {
   static navigationOptions = {
     title: 'Photography',
   };

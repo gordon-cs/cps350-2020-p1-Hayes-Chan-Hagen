@@ -8,6 +8,8 @@ export default class purpose extends React.Component {
   };
   render() {
     const {navigate} = this.props.navigation;
+    const bibleApi = this.props.navigation.getParam('bibleApi');
+    console.log(bibleApi)
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -16,7 +18,7 @@ export default class purpose extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Button1')}>
+          onPress={() => navigate('Style', {bibleApiStyle: bibleApi})}>
           <Text
             style={{
               fontSize: 40,
@@ -37,7 +39,7 @@ export default class purpose extends React.Component {
             backgroundColor: '#465881',
             width: Dimensions.get('window').width,
           }}
-          onPress={() => navigate('Button1')}>
+          onPress={() => navigate('Style', {bibleApiStyle: bibleApi})}>
           <Text
             style={{
               fontSize: 40,
@@ -56,25 +58,25 @@ export default class purpose extends React.Component {
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => navigate('Button1')}
+            onPress={() => navigate('Purpose')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => navigate('Button2')}
+            onPress={() => navigate('Style')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => navigate('Button3')}
+            onPress={() => navigate('Font')}
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => navigate('Button4')}
+            onPress={() => navigate('Preview')}
           />
         </View>
       </View>

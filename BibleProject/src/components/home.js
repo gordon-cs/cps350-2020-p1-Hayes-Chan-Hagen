@@ -7,7 +7,7 @@ import styles from '../styles';
 import DailyVerse from './dailyVerse';
 import BibleRef from './bibleRef';
 
-export default class index extends Component {
+export default class home extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -90,7 +90,7 @@ export default class index extends Component {
             />
           </View>
           <View style={{flex: 2}}>
-            <DailyVerse bibleVerse={this.state.BibleData.verse.details.text} />
+            <DailyVerse bibleVerse={this.state.BibleData.verse.details.text}/>
             <BibleRef
               bibleReference={this.state.BibleData.verse.details.reference}
             />
@@ -105,7 +105,11 @@ export default class index extends Component {
           <View style={{flex: 1, flexDirection: 'row', alignSelf: 'center'}}>
             <TouchableOpacity
               style={styles.beginButton}
-              onPress={() => this.props.navigation.navigate('Button1')}>
+              onPress={() =>
+                this.props.navigation.navigate('Purpose', {
+                  bibleApi: this.state.BibleData.verse.details.text,
+                })
+              }>
               <Text style={{fontSize: 20}}> CLICK TO BEGIN DESIGNING </Text>
             </TouchableOpacity>
           </View>

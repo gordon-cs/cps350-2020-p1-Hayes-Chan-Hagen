@@ -21,12 +21,12 @@ export default class App extends Component {
 const MainNavigator = createStackNavigator(
   {
     Home: {screen: HomeScreen},
-    Button1: {screen: purpose},
-    Button2: {screen: style},
-    Button3: {screen: font},
-    Button4: {screen: preview},
-    Button5: {screen: graphicDesign},
-    Button6: {screen: photography},
+    Purpose: {screen: purpose},
+    Style: {screen: style},
+    Graphic: {screen: graphicDesign},
+    Photo: {screen: photography},
+    Font: {screen: font},
+    Preview: {screen: preview},
   },
   {
     initialRouteName: 'Home',

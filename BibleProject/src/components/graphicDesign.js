@@ -14,17 +14,31 @@ export default class graphicDesign extends React.Component {
     title: 'Graphic Design',
   };
   render() {
+    const {navigate} = this.props.navigation;
+    const bibleApiGraphic = this.props.navigation.getParam('bibleApiDesign');
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <View style={styles.imageFormat}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                pic: background1,
+                bibleApiPreview: bibleApiGraphic,
+              });
+            }}>
             <Image
               source={background1}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                pic: background2,
+                bibleApiPreview: bibleApiGraphic,
+              });
+            }}>
             <Image
               source={background2}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
@@ -33,14 +47,26 @@ export default class graphicDesign extends React.Component {
         </View>
 
         <View style={styles.imageFormat}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                pic: background3,
+                bibleApiPreview: bibleApiGraphic,
+              });
+            }}>
             <Image
               source={background3}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                pic: background4,
+                bibleApiPreview: bibleApiGraphic,
+              });
+            }}>
             <Image
               source={background4}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
@@ -49,14 +75,26 @@ export default class graphicDesign extends React.Component {
         </View>
 
         <View style={styles.imageFormat}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                pic: background5,
+                bibleApiPreview: bibleApiGraphic,
+              });
+            }}>
             <Image
               source={background5}
               style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigate('Preview', {
+                pic: background6,
+                bibleApiPreview: bibleApiGraphic,
+              });
+            }}>
             <Image
               source={background6}
               style={{
@@ -79,25 +117,25 @@ export default class graphicDesign extends React.Component {
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => this.props.navigation.navigate('Button1')}
+            onPress={() => navigate('Button1')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => this.props.navigation.navigate('Button2')}
+            onPress={() => navigate('Button2')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => this.props.navigation.navigate('Button3')}
+            onPress={() => navigate('Button3')}
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => this.props.navigation.navigate('Button4')}
+            onPress={() => navigate('Button4')}
           />
         </View>
       </View>
