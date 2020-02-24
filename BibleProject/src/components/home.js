@@ -79,7 +79,6 @@ export default class home extends Component {
             <Image
               resizeMode={'contain'}
               style={{
-                //width: Dimensions.get('window').width,
                 marginTop: 50,
                 marginVertical: 20,
                 padding: '6%',

@@ -9,7 +9,7 @@ export default class purpose extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApi = this.props.navigation.getParam('bibleApi');
-    console.log(bibleApi)
+    console.log(bibleApi);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -76,7 +76,7 @@ export default class purpose extends React.Component {
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => navigate('Preview')}
+            onPress={() => navigate('Purpose')}
           />
         </View>
       </View>

@@ -7,6 +7,7 @@ export default class font extends React.Component {
     title: 'Font',
   };
   render() {
+    console.log(this.props.navigation.state.params);
     const {navigate} = this.props.navigation;
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
@@ -16,7 +17,13 @@ export default class font extends React.Component {
             alignSelf: 'center',
             paddingTop: 10,
           }}
-          onPress={() => navigate('Button3')}>
+          onPress={() =>
+            navigate('Preview', {
+              pic: this.props.navigation.state.params.pic,
+              bibleApiPreview: this.props.navigation.state.params
+                .bibleApiPreview,
+            })
+          }>
           <Text style={{fontSize: 25, textAlign: 'center'}}>Caligraphy</Text>
           <Text
             style={{
@@ -56,7 +63,13 @@ export default class font extends React.Component {
             width: Dimensions.get('window').width,
             paddingTop: 10,
           }}
-          onPress={() => navigate('Button3')}>
+          onPress={() =>
+            navigate('Preview', {
+              pic: this.props.navigation.state.params.pic,
+              bibleApiPreview: this.props.navigation.state.params
+                .bibleApiPreview,
+            })
+          }>
           <Text style={{fontSize: 25, textAlign: 'center'}}>Simple</Text>
           <Text
             style={{
@@ -94,25 +107,25 @@ export default class font extends React.Component {
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => navigate('Button1')}
+            onPress={() => navigate('Purpose')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => navigate('Button2')}
+            onPress={() => navigate('Style')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => navigate('Button3')}
+            onPress={() => navigate('Font')}
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => navigate('Button4')}
+            onPress={() => navigate('Preview')}
           />
         </View>
       </View>

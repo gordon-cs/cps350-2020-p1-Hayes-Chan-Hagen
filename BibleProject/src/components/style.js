@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {Button, View, Text, Dimensions, TouchableOpacity} from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
-import ImagePicker from 'react-native-image-picker';
 
 export default class style extends React.Component {
   static navigationOptions = {

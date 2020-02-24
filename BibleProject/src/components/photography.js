@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import {Button, View, Image, TouchableOpacity} from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import ImagePicker from 'react-native-image-picker';
 import styles from '../styles';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
@@ -12,6 +9,14 @@ import image5 from './images/image5.png';
 import image6 from './images/image6.png';
 
 export default class photography extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pic: null,
+      bibleApiPreview: null,
+    };
+  }
+
   static navigationOptions = {
     title: 'Photography',
   };
@@ -23,8 +28,8 @@ export default class photography extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
-                photo: image1,
+              this.setState({
+                pic: image1,
                 bibleApiPreview: bibleApiPhoto,
               });
             }}>
@@ -36,8 +41,8 @@ export default class photography extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
-                photo: image2,
+              this.setState({
+                pic: image2,
                 bibleApiPreview: bibleApiPhoto,
               });
             }}>
@@ -51,8 +56,8 @@ export default class photography extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
-                photo: image3,
+              this.setState({
+                pic: image3,
                 bibleApiPreview: bibleApiPhoto,
               });
             }}>
@@ -64,8 +69,8 @@ export default class photography extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
-                photo: image4,
+              this.setState({
+                pic: image4,
                 bibleApiPreview: bibleApiPhoto,
               });
             }}>
@@ -79,8 +84,8 @@ export default class photography extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
-                photo: image5,
+              this.setState({
+                pic: image5,
                 bibleApiPreview: bibleApiPhoto,
               });
             }}>
@@ -92,8 +97,8 @@ export default class photography extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
-                photo: image6,
+              this.setState({
+                pic: image6,
                 bibleApiPreview: bibleApiPhoto,
               });
             }}>
@@ -119,25 +124,34 @@ export default class photography extends React.Component {
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => this.props.navigation.navigate('Button1')}
+            onPress={() => this.props.navigation.navigate('Purpose')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => this.props.navigation.navigate('Button2')}
+            onPress={() => this.props.navigation.navigate('Style')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => this.props.navigation.navigate('Button3')}
+            onPress={() =>
+              navigate('Font', {
+                pic: this.state.pic,
+                bibleApiPreview: this.state.bibleApiPreview,
+              })
+            }
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => this.props.navigation.navigate('Button4')}
+            onPress={() =>
+              navigate('Preview', {
+                pic: this.state.pic,
+              })
+            }
           />
         </View>
       </View>

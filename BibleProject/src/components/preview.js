@@ -7,8 +7,6 @@ import {
   Dimensions,
   ImageBackground,
 } from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
 
 export default class Preview extends React.Component {
@@ -35,10 +33,12 @@ export default class Preview extends React.Component {
             source={backgroundImage}>
             <Text
               style={{
-                backgroundColor: 'transparent',
+                backgroundColor: 'white',
                 fontSize: 20,
                 fontWeight: 'bold',
                 textAlign: 'center',
+                marginLeft: 20,
+                marginRight: 20,
               }}>
               {biblePreview} Bible Api{' '}
             </Text>
@@ -54,13 +54,13 @@ export default class Preview extends React.Component {
           </View>
           <View style={styles.bottomBar}>
             <View style={styles.buttonFormat}>
-              <Button title="Purpose" onPress={() => navigate('Button1')} />
+              <Button title="Purpose" onPress={() => navigate('Purpose')} />
 
-              <Button title="Style" onPress={() => navigate('Button2')} />
+              <Button title="Style" onPress={() => navigate('Style')} />
 
-              <Button title="Font" onPress={() => navigate('Button3')} />
+              <Button title="Font" onPress={() => navigate('Font')} />
 
-              <Button title="Preview" onPress={() => navigate('Button4')} />
+              <Button title="Preview" onPress={() => navigate('Preview')} />
             </View>
           </View>
         </View>

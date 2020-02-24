@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Button, View, Image, TouchableOpacity} from 'react-native';
-import ImagePicker from 'react-native-image-picker';
 import styles from '../styles';
 import background1 from './images/background1.png';
 import background2 from './images/background2.png';
@@ -10,6 +9,14 @@ import background5 from './images/background5.png';
 import background6 from './images/background6.png';
 
 export default class graphicDesign extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pic: null,
+      bibleApiPreview: null,
+    };
+  }
+
   static navigationOptions = {
     title: 'Graphic Design',
   };
@@ -21,7 +28,7 @@ export default class graphicDesign extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
+              this.setState({
                 pic: background1,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -34,7 +41,7 @@ export default class graphicDesign extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
+              this.setState({
                 pic: background2,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -49,7 +56,7 @@ export default class graphicDesign extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
+              this.setState({
                 pic: background3,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -62,7 +69,7 @@ export default class graphicDesign extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
+              this.setState({
                 pic: background4,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -77,7 +84,7 @@ export default class graphicDesign extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
+              this.setState({
                 pic: background5,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -90,7 +97,7 @@ export default class graphicDesign extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              navigate('Preview', {
+              this.setState({
                 pic: background6,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -117,25 +124,34 @@ export default class graphicDesign extends React.Component {
           <Button
             title="Purpose"
             color="#d4d7dd"
-            onPress={() => navigate('Button1')}
+            onPress={() => navigate('Purpose')}
           />
 
           <Button
             title="Style"
             color="#738598"
-            onPress={() => navigate('Button2')}
+            onPress={() => navigate('Style')}
           />
 
           <Button
             title="Font"
             color="#3c4f65"
-            onPress={() => navigate('Button3')}
+            onPress={() =>
+              navigate('Font', {
+                pic: this.state.pic,
+                bibleApiPreview: this.state.bibleApiPreview,
+              })
+            }
           />
 
           <Button
             title="Preview"
             color="#f5c16c"
-            onPress={() => navigate('Button4')}
+            onPress={() =>
+              navigate('Preview', {
+                pic: this.state.pic,
+              })
+            }
           />
         </View>
       </View>
