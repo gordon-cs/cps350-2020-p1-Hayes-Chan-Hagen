@@ -1,0 +1,136 @@
+[33mcommit 85dfdc3630700af211f96c5b34481794f5100922[m[33m ([m[1;36mHEAD -> [m[1;32mHagen-test[m[33m, [m[1;31morigin/Hagen-test[m[33m)[m
+Merge: 64b8493 f3a2825
+Author: f4hagen <47019463+f4hagen@users.noreply.github.com>
+Date:   Sat Feb 15 16:33:37 2020 -0500
+
+    Merge branch 'master' into Hagen-test
+
+[33mcommit 64b8493a914a815c6346c3deb0ca2bf441bf8939[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Sat Feb 15 16:25:14 2020 -0500
+
+    adding homescreen
+
+[33mcommit 6cb285f9b0fb26b2f825fdff1871a92a44489a4a[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Sat Feb 15 16:20:54 2020 -0500
+
+    getting functions to work with navigation
+
+[33mcommit ad1f46db5cda46a4da9893be6bc9c209bfe53a0a[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Sat Feb 15 14:43:52 2020 -0500
+
+    fixing bugs
+
+[33mcommit f3a282539d668a95803f716622b93cc22f003749[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Sat Feb 15 14:42:25 2020 -0500
+
+    fixing some errors
+
+[33mcommit 47e4d9e1707976618fc6cb9bb08780765a4c446c[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Thu Feb 13 13:24:07 2020 -0500
+
+    fixing the button styling
+
+[33mcommit a9dde843bca9ec28129c6eef16d2ef2446f777d7[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Wed Feb 12 15:32:57 2020 -0500
+
+    rearranging buttons
+
+[33mcommit 7da0d96712a30dddc5d34c58d1b052a1994d0cea[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Wed Feb 12 03:03:58 2020 -0500
+
+    adding buttons to bottom
+
+[33mcommit 1bcd6a1d5f12b3023f5326bb99e3eb11e03ed8a4[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Wed Feb 12 00:12:05 2020 -0500
+
+    added the logo to main homepage successfully
+
+[33mcommit 70aa47cd6ddeb315c4a2404082ed0b1ff67462db[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Tue Feb 11 20:30:02 2020 -0500
+
+    adding some files/ separating code/ creating Homepage display
+
+[33mcommit eddcc90346fb33cf701aeb19a9e8179d86c55858[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Fri Feb 7 10:47:46 2020 -0500
+
+    played around with fonts
+
+[33mcommit 3c539593aa7aba4f7e3dacdc52ea4c2acb6cf24c[m
+Merge: 542fe5a 5e706b3
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Fri Feb 7 03:19:16 2020 -0500
+
+    Merge branch 'Hagen-test' of https://github.com/gordon-cs/cps350-2020-p1-Hayes-Chan-Hagen into Hagen-test
+
+[33mcommit 542fe5adeca6c2e835102e0a14267388b04fe704[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Fri Feb 7 03:18:25 2020 -0500
+
+    adding a few changes
+
+[33mcommit 5e706b3873b31a8768bfa91b7c42cb75ae69aa86[m
+Author: f4hagen <47019463+f4hagen@users.noreply.github.com>
+Date:   Fri Feb 7 02:26:35 2020 -0500
+
+    Update README.md
+
+[33mcommit a0f75ae434cdc75a2f74e183dc0929468ca8768f[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Fri Feb 7 02:22:08 2020 -0500
+
+    trying to create Kasey's design template
+
+[33mcommit 0da5e5955af014b4719ae95e4eee686d1b417e1c[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Thu Feb 6 21:07:26 2020 -0500
+
+    modifying text layout..
+
+[33mcommit 495e32ecd042c3a710a2dfc69370d0e64e1a040e[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Thu Feb 6 20:54:53 2020 -0500
+
+    modifying text locations..
+
+[33mcommit 6a941282ade9b141ff5bd382c0687f7d787a3996[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Thu Feb 6 20:30:22 2020 -0500
+
+    added some text for the Bible verse
+
+[33mcommit ad28485d32bd31d8591a279d5d71944fa0401d5f[m
+Merge: 119a3a9 1a563ae
+Author: f4hagen <47019463+f4hagen@users.noreply.github.com>
+Date:   Thu Feb 6 19:13:23 2020 -0500
+
+    Merge pull request #1 from gordon-cs/Hagen-test
+    
+    added Bible Api
+
+[33mcommit 1a563ae61d0cf8904fa7fe53e539465480dac382[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Thu Feb 6 19:12:24 2020 -0500
+
+    added Bible Api
+
+[33mcommit 119a3a9300c4c30b9dcd2901ab345b1e8f279303[m
+Author: f4hagen <ffhagen@gmail.com>
+Date:   Thu Feb 6 11:25:01 2020 -0500
+
+    adding initial files to Bible Project
+
+[33mcommit 41d142a8f8c0e9f2f124e663a314b838cfb24093[m
+Author: f4hagen <47019463+f4hagen@users.noreply.github.com>
+Date:   Thu Feb 6 11:06:14 2020 -0500
+
+    Initial commit
