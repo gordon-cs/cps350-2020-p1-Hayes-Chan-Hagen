@@ -5,7 +5,6 @@ import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
 import ImagePicker from 'react-native-image-picker';
 
-
 export default class style extends React.Component {
   static navigationOptions = {
     title: 'Style',
@@ -14,7 +13,7 @@ export default class style extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiFont = this.props.navigation.getParam('bibleApiStyle');
-    console.log(bibleApiFont)
+    console.log(bibleApiFont);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity

@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     borderWidth: 1,
-    padding: 20,
-    paddingLeft: 70,
-    paddingRight: 70,
+    padding: 10,
+    //paddingLeft: 70,
+    //paddingRight: 70,
     backgroundColor: 'white',
   },
   bottomBar: {

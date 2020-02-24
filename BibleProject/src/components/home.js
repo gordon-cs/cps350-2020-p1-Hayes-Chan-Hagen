@@ -1,8 +1,8 @@
 /*
  * Got help from Dr. Tuck and Jahnuel
  */
-import React, {Component, AsyncStorage} from 'react';
-import {Image, View, Text, TouchableOpacity} from 'react-native';
+import React, {Component} from 'react';
+import {Image, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import styles from '../styles';
 import DailyVerse from './dailyVerse';
 import BibleRef from './bibleRef';
@@ -79,9 +79,8 @@ export default class home extends Component {
             <Image
               resizeMode={'contain'}
               style={{
+                //width: Dimensions.get('window').width,
                 marginTop: 50,
-                height: 400,
-                width: 400,
                 marginVertical: 20,
                 padding: '6%',
                 alignSelf: 'center',
@@ -89,8 +88,8 @@ export default class home extends Component {
               source={require('./images/logo.png')}
             />
           </View>
-          <View style={{flex: 2}}>
-            <DailyVerse bibleVerse={this.state.BibleData.verse.details.text}/>
+          <View style={{flex: 3}}>
+            <DailyVerse bibleVerse={this.state.BibleData.verse.details.text} />
             <BibleRef
               bibleReference={this.state.BibleData.verse.details.reference}
             />
@@ -110,7 +109,7 @@ export default class home extends Component {
                   bibleApi: this.state.BibleData.verse.details.text,
                 })
               }>
-              <Text style={{fontSize: 20}}> CLICK TO BEGIN DESIGNING </Text>
+              <Text style={{fontSize: 15}}> CLICK TO BEGIN DESIGNING </Text>
             </TouchableOpacity>
           </View>
         </View>

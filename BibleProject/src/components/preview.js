@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import {Button, View, Image, Text} from 'react-native';
+import {
+  Button,
+  View,
+  Image,
+  Text,
+  Dimensions,
+  ImageBackground,
+} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import styles from '../styles';
@@ -17,10 +24,25 @@ export default class Preview extends React.Component {
     if (backgroundImage) {
       return (
         <View style={{flex: 1}}>
-          <View>
-            <Image source={backgroundImage} />
-            <Text>{biblePreview} Bible Api </Text>
-          </View>
+          <ImageBackground
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: Dimensions.get('window').width,
+              resizeMode: 'cover',
+            }}
+            source={backgroundImage}>
+            <Text
+              style={{
+                backgroundColor: 'transparent',
+                fontSize: 20,
+                fontWeight: 'bold',
+                textAlign: 'center',
+              }}>
+              {biblePreview} Bible Api{' '}
+            </Text>
+          </ImageBackground>
         </View>
       );
     } else {
@@ -28,7 +50,7 @@ export default class Preview extends React.Component {
         <View style={{flex: 1}}>
           <View>
             <Image source={backgroundPhoto} />
-            <Text>{biblePreview} Bible Api </Text>
+            <Text>{biblePreview}</Text>
           </View>
           <View style={styles.bottomBar}>
             <View style={styles.buttonFormat}>

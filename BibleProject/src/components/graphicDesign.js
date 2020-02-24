@@ -142,5 +142,3 @@ export default class graphicDesign extends React.Component {
     );
   }
 }
-
-//width: Dimensions.get('window').width}}
