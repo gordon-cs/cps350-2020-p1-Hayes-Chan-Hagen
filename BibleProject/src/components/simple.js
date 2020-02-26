@@ -18,10 +18,13 @@ export default class Simple extends React.Component {
             alignSelf: 'center',
             paddingTop: 10,
           }}
-          onPress={() =>
-            navigate('Preview', {bibleApiResult: bibleApiPreview})
-          }>
-          <Text style={{fontSize: 25, textAlign: 'center', paddingBottom: 60}}>
+          onPress={() => navigate('Step3', {bibleApiResult: bibleApiPreview})}>
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              paddingBottom: 60,
+            }}>
             Simple
           </Text>
           <Text

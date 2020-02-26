@@ -18,9 +18,7 @@ export default class Calligraphy extends React.Component {
             alignSelf: 'center',
             paddingTop: 10,
           }}
-          onPress={() =>
-            navigate('Preview', {bibleApiResult: bibleApiPreview})
-          }>
+          onPress={() => navigate('Step3', {bibleApiResult: bibleApiPreview})}>
           <Text
             style={{
               fontSize: 25,

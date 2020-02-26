@@ -18,7 +18,7 @@ export default class Preview extends React.Component {
     const {navigate} = this.props.navigation;
     const backgroundImage = this.props.navigation.getParam('pic');
     const backgroundPhoto = this.props.navigation.getParam('photo');
-    const biblePreview = this.props.navigation.getParam('bibleApiResult');
+    const biblePreview = this.props.navigation.getParam('bibleApiDone');
     console.log(biblePreview);
     if (backgroundImage) {
       return (
