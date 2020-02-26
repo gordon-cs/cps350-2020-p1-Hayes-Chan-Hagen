@@ -57,6 +57,30 @@ export default class Step3 extends React.Component {
             changes!
           </Text>
         </TouchableOpacity>
+        <View
+          style={{
+            borderBottomColor: 'black',
+            borderBottomWidth: 1,
+            marginBottom: 10,
+          }}
+        />
+        <View
+          style={{
+            justifyContent: 'flex-end',
+            marginLeft: 330,
+            marginRight: 10,
+            marginBottom: 10,
+          }}>
+          <Button
+            title="Next"
+            onPress={() =>
+              this.props.navigation.navigate('Preview', {
+                pic: this.props.navigation.state.params.pic,
+                bibleApiDone: bibleApiShow,
+              })
+            }
+          />
+        </View>
       </View>
     );
   }

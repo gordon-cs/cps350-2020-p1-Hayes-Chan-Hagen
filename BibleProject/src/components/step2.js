@@ -49,6 +49,29 @@ export default class Step2 extends React.Component {
             for the scripture
           </Text>
         </TouchableOpacity>
+        <View
+          style={{
+            borderBottomColor: 'black',
+            borderBottomWidth: 1,
+            marginBottom: 10,
+          }}
+        />
+        <View
+          style={{
+            justifyContent: 'flex-end',
+            marginLeft: 330,
+            marginRight: 10,
+            marginBottom: 10,
+          }}>
+          <Button
+            title="Next"
+            onPress={() =>
+              this.props.navigation.navigate('Font', {
+                bibleApiType: bibleApiText,
+              })
+            }
+          />
+        </View>
       </View>
     );
   }

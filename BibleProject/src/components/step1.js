@@ -43,6 +43,24 @@ export default class Step1 extends React.Component {
             of your layout
           </Text>
         </TouchableOpacity>
+
+        <View
+          style={{
+            borderBottomColor: 'black',
+            borderBottomWidth: 1,
+            marginBottom: 10
+          }}
+        />
+        <View style={{justifyContent: 'flex-end', marginLeft: 330, marginRight: 10, marginBottom: 10}}>
+          <Button
+            title="Next"
+            onPress={() =>
+              this.props.navigation.navigate('Style', {
+                bibleApiDisplay: bibleApi,
+              })
+            }
+          />
+        </View>
       </View>
     );
   }

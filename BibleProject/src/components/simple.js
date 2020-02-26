@@ -35,13 +35,14 @@ export default class Simple extends React.Component {
             style={{
               fontSize: 25,
               textAlign: 'center',
-              paddingBottom: 60,
+              paddingBottom: 30,
+              paddingTop: 30,
             }}>
             Simple
           </Text>
           <Text
             style={{
-              fontSize: 40,
+              fontSize: 25,
               //fontFamily: '',
               backgroundColor: '#465881',
               textAlign: 'center',
@@ -58,8 +59,8 @@ export default class Simple extends React.Component {
             }}>
             <Text
               style={{
-                paddingTop: 100,
-                fontSize: 45,
+                paddingTop: 50,
+                fontSize: 35,
                 textAlign: 'center',
                 alignSelf: 'center',
                 //fontFamily: 'Kindly Jasmine',
@@ -69,7 +70,7 @@ export default class Simple extends React.Component {
             <Text
               style={{
                 paddingTop: 10,
-                fontSize: 45,
+                fontSize: 35,
                 textAlign: 'center',
                 alignSelf: 'center',
                 //fontFamily: 'Kindly Jasmine',
@@ -79,7 +80,7 @@ export default class Simple extends React.Component {
             <Text
               style={{
                 paddingTop: 10,
-                fontSize: 45,
+                fontSize: 35,
                 textAlign: 'center',
                 alignSelf: 'center',
                 //fontFamily: 'Kindly Jasmine',
@@ -89,7 +90,7 @@ export default class Simple extends React.Component {
             <Text
               style={{
                 paddingTop: 10,
-                fontSize: 45,
+                fontSize: 35,
                 textAlign: 'center',
                 alignSelf: 'center',
                 //fontFamily: 'Kindly Jasmine',
@@ -98,6 +99,40 @@ export default class Simple extends React.Component {
             </Text>
           </View>
         </TouchableOpacity>
+        <View
+          style={{
+            borderBottomColor: 'black',
+            borderBottomWidth: 1,
+          }}
+        />
+        <View
+          style={{
+            flex: 0.25,
+            flexDirection: 'row',
+            paddingTop: 10,
+            justifyContent: 'space-between',
+            paddingBottom: 10,
+            marginLeft: 10,
+            marginRight: 10,
+          }}>
+          <View style={{justifyContent: 'flex-start'}}>
+            <Button
+              title="Back"
+              onPress={() => this.props.navigation.navigate('Font')}
+            />
+          </View>
+          <View style={{justifyContent: 'flex-end'}}>
+            <Button
+              title="Next"
+              onPress={() =>
+                this.props.navigation.navigate('Step3', {
+                  pic: this.props.navigation.state.params.pic,
+                  bibleApiResult: bibleApiPreview,
+                })
+              }
+            />
+          </View>
+        </View>
       </View>
     );
   }
