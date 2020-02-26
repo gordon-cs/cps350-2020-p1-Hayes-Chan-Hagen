@@ -23,6 +23,7 @@ export default class photography extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiPhoto = this.props.navigation.getParam('bibleApiDesign');
+    console.log(bibleApiPhoto);
     return (
       <View style={{flex: 1, backgroundColor: '#e1f2fb'}}>
         <View style={styles.imageFormat}>

@@ -7,8 +7,9 @@ export default class Simple extends React.Component {
     title: 'Simple',
   };
   render() {
-    console.log(this.props.navigation.state.params);
     const {navigate} = this.props.navigation;
+    const bibleApiPreview = this.props.navigation.getParam('bibleApiFont');
+    console.log(bibleApiPreview);
     return (
       <View style={{flex: 1, backgroundColor: '#465881'}}>
         <TouchableOpacity
@@ -18,11 +19,7 @@ export default class Simple extends React.Component {
             paddingTop: 10,
           }}
           onPress={() =>
-            navigate('KindlyJ', {
-              pic: this.props.navigation.state.params.pic,
-              bibleApiPreview: this.props.navigation.state.params
-                .bibleApiPreview,
-            })
+            navigate('Preview', {bibleApiResult: bibleApiPreview})
           }>
           <Text style={{fontSize: 25, textAlign: 'center', paddingBottom: 60}}>
             Simple

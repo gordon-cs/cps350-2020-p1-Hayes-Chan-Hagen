@@ -47,9 +47,7 @@ export default class font extends React.Component {
           }}
           onPress={() =>
             navigate('Simple', {
-              //pic: this.props.navigation.state.params.pic,
-              bibleApiPreview: this.props.navigation.state.params
-                .bibleApiPreview,
+              bibleApiFont: bibleApiCalli,
             })
           }>
           <Text

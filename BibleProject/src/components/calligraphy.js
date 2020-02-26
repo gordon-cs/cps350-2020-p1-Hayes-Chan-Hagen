@@ -7,7 +7,6 @@ export default class Calligraphy extends React.Component {
     title: 'Calligraphy',
   };
   render() {
-    //console.log(this.props.navigation.state.params);
     const {navigate} = this.props.navigation;
     const bibleApiPreview = this.props.navigation.getParam('bibleApiFont');
     console.log(bibleApiPreview);
