@@ -7,7 +7,6 @@ export default class Step3 extends React.Component {
     super(props);
     this.state = {
       pic: null,
-      bibleApiPreview: null,
     };
   }
   static navigationOptions = {
@@ -17,6 +16,7 @@ export default class Step3 extends React.Component {
     const {navigate} = this.props.navigation;
     const bibleApiShow = this.props.navigation.getParam('bibleApiResult');
     console.log(bibleApiShow);
+    console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -25,7 +25,12 @@ export default class Step3 extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Preview', {bibleApiDone: bibleApiShow})}>
+          onPress={() =>
+            navigate('Preview', {
+              pic: this.props.navigation.state.params.pic,
+              bibleApiDone: bibleApiShow,
+            })
+          }>
           <Text
             style={{
               fontSize: 25,

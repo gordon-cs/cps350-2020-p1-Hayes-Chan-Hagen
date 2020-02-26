@@ -10,6 +10,12 @@ import {
 import styles from '../styles';
 
 export default class Preview extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pic: null,
+    };
+  }
   static navigationOptions = {
     title: 'Preview',
   };
@@ -20,6 +26,7 @@ export default class Preview extends React.Component {
     const backgroundPhoto = this.props.navigation.getParam('photo');
     const biblePreview = this.props.navigation.getParam('bibleApiDone');
     console.log(biblePreview);
+    console.log(this.props.navigation.state.params.pic);
     if (backgroundImage) {
       return (
         <View style={{flex: 1}}>

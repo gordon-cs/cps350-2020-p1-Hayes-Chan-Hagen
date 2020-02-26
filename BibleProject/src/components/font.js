@@ -3,6 +3,12 @@ import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import styles from '../styles';
 
 export default class font extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pic: null,
+    };
+  }
   static navigationOptions = {
     title: 'Font',
   };
@@ -10,6 +16,7 @@ export default class font extends React.Component {
     const {navigate} = this.props.navigation;
     const bibleApiCalli = this.props.navigation.getParam('bibleApiType');
     console.log(bibleApiCalli);
+    console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -20,6 +27,7 @@ export default class font extends React.Component {
           }}
           onPress={() =>
             navigate('Calligraphy', {
+              pic: this.props.navigation.state.params.pic,
               bibleApiFont: bibleApiCalli,
             })
           }>
@@ -47,6 +55,7 @@ export default class font extends React.Component {
           }}
           onPress={() =>
             navigate('Simple', {
+              pic: this.props.navigation.state.params.pic,
               bibleApiFont: bibleApiCalli,
             })
           }>

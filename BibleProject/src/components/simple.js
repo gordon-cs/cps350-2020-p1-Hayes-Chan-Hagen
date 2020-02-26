@@ -3,6 +3,12 @@ import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import styles from '../styles';
 
 export default class Simple extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pic: null,
+    };
+  }
   static navigationOptions = {
     title: 'Simple',
   };
@@ -10,6 +16,7 @@ export default class Simple extends React.Component {
     const {navigate} = this.props.navigation;
     const bibleApiPreview = this.props.navigation.getParam('bibleApiFont');
     console.log(bibleApiPreview);
+    console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#465881'}}>
         <TouchableOpacity
@@ -18,7 +25,12 @@ export default class Simple extends React.Component {
             alignSelf: 'center',
             paddingTop: 10,
           }}
-          onPress={() => navigate('Step3', {bibleApiResult: bibleApiPreview})}>
+          onPress={() =>
+            navigate('Step3', {
+              pic: this.props.navigation.state.params.pic,
+              bibleApiResult: bibleApiPreview,
+            })
+          }>
           <Text
             style={{
               fontSize: 25,
