@@ -178,6 +178,7 @@ export default class graphicDesign extends React.Component {
             onPress={() =>
               this.props.navigation.navigate('Style', {
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               })
             }
           />

@@ -100,6 +100,8 @@ export default class Preview extends React.Component {
                 onPress={() =>
                   this.props.navigation.navigate('Step4', {
                     biblePreview,
+                    bibleRef,
+                    backgroundImage,
                   })
                 }
               />
@@ -119,25 +121,3 @@ export default class Preview extends React.Component {
     }
   }
 }
-/*
- bottomBar: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  buttonFormat: {
-    flex: 1,
-    justifyContent: 'space-around',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  beginButton: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    borderWidth: 1,
-    padding: 10,
-    //paddingLeft: 70,
-    //paddingRight: 70,
-    backgroundColor: 'white',
-  },
-*/

@@ -70,6 +70,7 @@ export default class Step1 extends React.Component {
             onPress={() =>
               this.props.navigation.navigate('Style', {
                 bibleApiDisplay: bibleApi,
+                bibleRDisplay: bibleRef,
               })
             }
           />

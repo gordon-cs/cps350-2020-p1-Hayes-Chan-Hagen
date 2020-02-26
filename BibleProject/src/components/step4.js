@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
+import {Button, View, Text, TouchableOpacity, Share} from 'react-native';
 import styles from '../styles';
+//import Share from 'react-native-share';
+//import ImgToBase64 from 'react-native-image-base64';
 
 export default class Step4 extends React.Component {
   constructor(props) {
@@ -12,9 +14,23 @@ export default class Step4 extends React.Component {
   static navigationOptions = {
     title: 'Step4',
   };
+
+  shareImage() {
+    Share.share(
+      {
+        title: 'Share Image',
+        url: require('../components/images/background1.png'),
+        message: 'Verse of the day',
+      },
+      {
+        dialogTitle: 'Share this verse',
+      },
+    );
+  }
+
   render() {
     const {navigate} = this.props.navigation;
-    const bibleApiShow = this.props.navigation.getParam('bibleApiResult');
+    const bibleApiShow = this.props.navigation.getParam('bibleApiPreview');
     console.log(bibleApiShow);
     console.log(this.props.navigation.state.params.pic);
     return (
@@ -46,7 +62,7 @@ export default class Step4 extends React.Component {
             or save as a new screensaver{' '}
           </Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={this.shareImage}>
           <Text
             style={{
               fontSize: 25,

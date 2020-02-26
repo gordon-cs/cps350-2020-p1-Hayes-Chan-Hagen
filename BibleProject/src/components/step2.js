@@ -70,6 +70,7 @@ export default class Step2 extends React.Component {
             title="Next"
             onPress={() =>
               this.props.navigation.navigate('Font', {
+                pic: this.props.navigation.state.params.pic,
                 bibleApiType: bibleApiText,
                 bibleRType: bibleRText,
               })

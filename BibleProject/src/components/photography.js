@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Image, TouchableOpacity} from 'react-native';
+import {Button, View, Image, TouchableOpacity, Text} from 'react-native';
 import styles from '../styles';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
@@ -29,7 +29,22 @@ export default class photography extends React.Component {
     console.log(bibleRPhoto);
     return (
       <View style={{flex: 1, backgroundColor: '#e1f2fb'}}>
-        <View style={styles.imageFormat}>
+        <Text
+          style={{
+            fontSize: 20,
+            textAlign: 'center',
+            paddingBottom: 10,
+            paddingTop: 10,
+          }}>
+          Click on your preferred design
+        </Text>
+        <View
+          style={{
+            flex: 5,
+            flexDirection: 'row',
+            marginVertical: 10,
+            justifyContent: 'center',
+          }}>
           <TouchableOpacity
             onPress={() => {
               navigate('Step2', {
@@ -126,40 +141,24 @@ export default class photography extends React.Component {
 
         <View
           style={{
-            flex: 2,
-            justifyContent: 'space-around',
-            flexDirection: 'row',
-            alignItems: 'center',
+            borderBottomColor: 'black',
+            borderBottomWidth: 1,
+            marginBottom: 10,
+            marginTop: 70,
+          }}
+        />
+        <View
+          style={{
+            justifyContent: 'flex-start',
+            marginLeft: 10,
+            marginRight: 330,
+            marginBottom: 10,
           }}>
           <Button
-            title="Purpose"
-            color="#d4d7dd"
-            onPress={() => this.props.navigation.navigate('Purpose')}
-          />
-
-          <Button
-            title="Style"
-            color="#738598"
-            onPress={() => this.props.navigation.navigate('Style')}
-          />
-
-          <Button
-            title="Font"
-            color="#3c4f65"
+            title="Back"
             onPress={() =>
-              navigate('Font', {
-                pic: this.state.pic,
-                bibleApiPreview: this.state.bibleApiPreview,
-              })
-            }
-          />
-
-          <Button
-            title="Preview"
-            color="#f5c16c"
-            onPress={() =>
-              navigate('Preview', {
-                pic: this.state.pic,
+              this.props.navigation.navigate('Style', {
+                bibleApiPreview: bibleApiPhoto,
               })
             }
           />
