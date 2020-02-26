@@ -7,8 +7,9 @@ export default class font extends React.Component {
     title: 'Font',
   };
   render() {
-    console.log(this.props.navigation.state.params);
     const {navigate} = this.props.navigation;
+    const bibleApiCalli = this.props.navigation.getParam('bibleApiType');
+    console.log(bibleApiCalli);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -19,9 +20,7 @@ export default class font extends React.Component {
           }}
           onPress={() =>
             navigate('Calligraphy', {
-              //pic: this.props.navigation.state.params.pic,
-              bibleApiPreview: this.props.navigation.state.params
-                .bibleApiPreview,
+              bibleApiFont: bibleApiCalli,
             })
           }>
           <Text

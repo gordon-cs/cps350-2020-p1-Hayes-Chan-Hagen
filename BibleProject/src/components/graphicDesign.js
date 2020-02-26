@@ -23,6 +23,7 @@ export default class graphicDesign extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiGraphic = this.props.navigation.getParam('bibleApiDesign');
+    console.log(bibleApiGraphic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <View style={styles.imageFormat}>

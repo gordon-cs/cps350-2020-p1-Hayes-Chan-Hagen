@@ -15,10 +15,11 @@ export default class Preview extends React.Component {
   };
 
   render() {
+    const {navigate} = this.props.navigation;
     const backgroundImage = this.props.navigation.getParam('pic');
     const backgroundPhoto = this.props.navigation.getParam('photo');
-    const biblePreview = this.props.navigation.getParam('bibleApiPreview');
-    const {navigate} = this.props.navigation;
+    const biblePreview = this.props.navigation.getParam('bibleApiResult');
+    console.log(biblePreview);
     if (backgroundImage) {
       return (
         <View style={{flex: 1}}>

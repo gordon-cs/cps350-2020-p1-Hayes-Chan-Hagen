@@ -7,8 +7,10 @@ export default class Calligraphy extends React.Component {
     title: 'Calligraphy',
   };
   render() {
-    console.log(this.props.navigation.state.params);
+    //console.log(this.props.navigation.state.params);
     const {navigate} = this.props.navigation;
+    const bibleApiPreview = this.props.navigation.getParam('bibleApiFont');
+    console.log(bibleApiPreview);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -18,13 +20,14 @@ export default class Calligraphy extends React.Component {
             paddingTop: 10,
           }}
           onPress={() =>
-            navigate('Preview', {
-              pic: this.props.navigation.state.params.pic,
-              bibleApiPreview: this.props.navigation.state.params
-                .bibleApiPreview,
-            })
+            navigate('Preview', {bibleApiResult: bibleApiPreview})
           }>
-          <Text style={{fontSize: 25, textAlign: 'center', paddingBottom: 60}}>
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              paddingBottom: 60,
+            }}>
             Caligraphy
           </Text>
           <Text

@@ -3,13 +3,13 @@ import {Button, View, Text, Dimensions, TouchableOpacity} from 'react-native';
 import styles from '../styles';
 
 export default class style extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
     this.state = {
       //pic: null,
       bibleApiPreview: null,
     };
-  }
+  }*/
 
   static navigationOptions = {
     title: 'Style',
@@ -17,7 +17,7 @@ export default class style extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
-    const bibleApiStyle = this.props.navigation.getParam('bibleApiStep1');
+    const bibleApiStyle = this.props.navigation.getParam('bibleApiDisplay');
     console.log(bibleApiStyle);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>

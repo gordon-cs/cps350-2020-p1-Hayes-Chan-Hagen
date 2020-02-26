@@ -3,6 +3,12 @@ import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import styles from '../styles';
 
 export default class Step1 extends React.Component {
+  /*constructor(props) {
+    super(props);
+    this.state = {
+      bibleApiDisplay: null,
+    };
+  }*/
   static navigationOptions = {
     title: 'Step1',
   };
@@ -18,7 +24,7 @@ export default class Step1 extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Style', {bibleStep1: bibleApi})}>
+          onPress={() => navigate('Style', {bibleApiDisplay: bibleApi})}>
           <Text
             style={{
               fontSize: 40,
