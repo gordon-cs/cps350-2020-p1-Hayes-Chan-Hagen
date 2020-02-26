@@ -14,6 +14,7 @@ export default class photography extends React.Component {
     this.state = {
       pic: null,
       bibleApiPreview: null,
+      bibleRPreview: null,
     };
   }
 
@@ -23,7 +24,9 @@ export default class photography extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiPhoto = this.props.navigation.getParam('bibleApiDesign');
+    const bibleRPhoto = this.props.navigation.getParam('bibleRDesign');
     console.log(bibleApiPhoto);
+    console.log(bibleRPhoto);
     return (
       <View style={{flex: 1, backgroundColor: '#e1f2fb'}}>
         <View style={styles.imageFormat}>
@@ -32,6 +35,7 @@ export default class photography extends React.Component {
               navigate('Step2', {
                 pic: image1,
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               });
             }}>
             <Image
@@ -45,6 +49,7 @@ export default class photography extends React.Component {
               navigate('Step2', {
                 pic: image2,
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               });
             }}>
             <Image
@@ -60,6 +65,7 @@ export default class photography extends React.Component {
               navigate('Step2', {
                 pic: image3,
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               });
             }}>
             <Image
@@ -73,6 +79,7 @@ export default class photography extends React.Component {
               navigate('Step2', {
                 pic: image4,
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               });
             }}>
             <Image
@@ -88,6 +95,7 @@ export default class photography extends React.Component {
               navigate('Step2', {
                 pic: image5,
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               });
             }}>
             <Image
@@ -101,6 +109,7 @@ export default class photography extends React.Component {
               navigate('Step2', {
                 pic: image6,
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               });
             }}>
             <Image

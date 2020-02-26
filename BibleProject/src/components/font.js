@@ -15,7 +15,9 @@ export default class font extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiCalli = this.props.navigation.getParam('bibleApiType');
+    const bibleRCalli = this.props.navigation.getParam('bibleRType');
     console.log(bibleApiCalli);
+    console.log(bibleRCalli);
     console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
@@ -29,6 +31,7 @@ export default class font extends React.Component {
             navigate('Calligraphy', {
               pic: this.props.navigation.state.params.pic,
               bibleApiFont: bibleApiCalli,
+              bibleRFont: bibleRCalli,
             })
           }>
           <Text
@@ -57,6 +60,7 @@ export default class font extends React.Component {
             navigate('Simple', {
               pic: this.props.navigation.state.params.pic,
               bibleApiFont: bibleApiCalli,
+              bibleRFont: bibleRCalli,
             })
           }>
           <Text

@@ -14,6 +14,7 @@ export default class graphicDesign extends React.Component {
     this.state = {
       pic: null,
       bibleApiPreview: null,
+      bibleRPreview: null,
     };
   }
 
@@ -23,7 +24,9 @@ export default class graphicDesign extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiGraphic = this.props.navigation.getParam('bibleApiDesign');
+    const bibleRGraphic = this.props.navigation.getParam('bibleRDesign');
     console.log(bibleApiGraphic);
+    console.log(bibleRGraphic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <Text
@@ -47,6 +50,7 @@ export default class graphicDesign extends React.Component {
               navigate('Step2', {
                 pic: background1,
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               });
             }}>
             <Image
@@ -60,6 +64,7 @@ export default class graphicDesign extends React.Component {
               navigate('Step2', {
                 pic: background2,
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               });
             }}>
             <Image
@@ -75,6 +80,7 @@ export default class graphicDesign extends React.Component {
               navigate('Step2', {
                 pic: background3,
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               });
             }}>
             <Image
@@ -94,6 +100,7 @@ export default class graphicDesign extends React.Component {
               navigate('Step2', {
                 pic: background4,
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               });
             }}>
             <Image
@@ -115,6 +122,7 @@ export default class graphicDesign extends React.Component {
               navigate('Step2', {
                 pic: background5,
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               });
             }}>
             <Image
@@ -134,6 +142,7 @@ export default class graphicDesign extends React.Component {
               navigate('Step2', {
                 pic: background6,
                 bibleApiPreview: bibleApiGraphic,
+                bibleRPreview: bibleRGraphic,
               });
             }}>
             <Image

@@ -15,7 +15,9 @@ export default class Step2 extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiText = this.props.navigation.getParam('bibleApiPreview');
+    const bibleRText = this.props.navigation.getParam('bibleRPreview');
     console.log(bibleApiText);
+    console.log(bibleRText);
     console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
@@ -29,6 +31,7 @@ export default class Step2 extends React.Component {
             navigate('Font', {
               pic: this.props.navigation.state.params.pic,
               bibleApiType: bibleApiText,
+              bibleRType: bibleRText,
             })
           }>
           <Text
@@ -68,6 +71,7 @@ export default class Step2 extends React.Component {
             onPress={() =>
               this.props.navigation.navigate('Font', {
                 bibleApiType: bibleApiText,
+                bibleRType: bibleRText,
               })
             }
           />

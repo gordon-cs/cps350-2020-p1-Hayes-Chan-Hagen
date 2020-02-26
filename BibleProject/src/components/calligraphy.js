@@ -15,7 +15,9 @@ export default class Calligraphy extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiPreview = this.props.navigation.getParam('bibleApiFont');
+    const bibleRPreview = this.props.navigation.getParam('bibleRFont');
     console.log(bibleApiPreview);
+    console.log(bibleRPreview);
     console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
@@ -29,6 +31,7 @@ export default class Calligraphy extends React.Component {
             navigate('Step3', {
               pic: this.props.navigation.state.params.pic,
               bibleApiResult: bibleApiPreview,
+              bibleRResult: bibleRPreview,
             })
           }>
           <Text
@@ -130,6 +133,7 @@ export default class Calligraphy extends React.Component {
                 this.props.navigation.navigate('Step3', {
                   pic: this.props.navigation.state.params.pic,
                   bibleApiResult: bibleApiPreview,
+                  bibleRResult: bibleRPreview,
                 })
               }
             />

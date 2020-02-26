@@ -15,7 +15,9 @@ export default class Step3 extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiShow = this.props.navigation.getParam('bibleApiResult');
+    const bibleRShow = this.props.navigation.getParam('bibleRResult');
     console.log(bibleApiShow);
+    console.log(bibleRShow);
     console.log(this.props.navigation.state.params.pic);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
@@ -29,6 +31,7 @@ export default class Step3 extends React.Component {
             navigate('Preview', {
               pic: this.props.navigation.state.params.pic,
               bibleApiDone: bibleApiShow,
+              bibleRDone: bibleRShow,
             })
           }>
           <Text
@@ -77,6 +80,7 @@ export default class Step3 extends React.Component {
               this.props.navigation.navigate('Preview', {
                 pic: this.props.navigation.state.params.pic,
                 bibleApiDone: bibleApiShow,
+                bibleRDone: bibleRShow,
               })
             }
           />

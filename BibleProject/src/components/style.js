@@ -3,14 +3,6 @@ import {Button, View, Text, Dimensions, TouchableOpacity} from 'react-native';
 import styles from '../styles';
 
 export default class style extends React.Component {
-  /*constructor(props) {
-    super(props);
-    this.state = {
-      //pic: null,
-      bibleApiPreview: null,
-    };
-  }*/
-
   static navigationOptions = {
     title: 'Style',
   };
@@ -18,7 +10,9 @@ export default class style extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApiStyle = this.props.navigation.getParam('bibleApiDisplay');
+    const bibleRStyle = this.props.navigation.getParam('bibleRDisplay');
     console.log(bibleApiStyle);
+    console.log(bibleRStyle);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -27,7 +21,12 @@ export default class style extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Graphic', {bibleApiDesign: bibleApiStyle})}>
+          onPress={() =>
+            navigate('Graphic', {
+              bibleApiDesign: bibleApiStyle,
+              bibleRDesign: bibleRStyle,
+            })
+          }>
           <Text
             style={{
               fontSize: 40,
@@ -48,7 +47,12 @@ export default class style extends React.Component {
             backgroundColor: '#e1f2fb',
             width: Dimensions.get('window').width,
           }}
-          onPress={() => navigate('Photo', {bibleApiDesign: bibleApiStyle})}>
+          onPress={() =>
+            navigate('Photo', {
+              bibleApiDesign: bibleApiStyle,
+              bibleRDesign: bibleRStyle,
+            })
+          }>
           <Text
             style={{
               fontSize: 40,

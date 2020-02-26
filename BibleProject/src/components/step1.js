@@ -15,7 +15,9 @@ export default class Step1 extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const bibleApi = this.props.navigation.getParam('bibleApi');
+    const bibleRef = this.props.navigation.getParam('bibleRef');
     console.log(bibleApi);
+    console.log(bibleRef);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -23,8 +25,13 @@ export default class Step1 extends React.Component {
             flex: 4,
             justifyContent: 'center',
             alignSelf: 'center',
-          }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Style', {bibleApiDisplay: bibleApi})}>
+          }}
+          onPress={() =>
+            navigate('Style', {
+              bibleApiDisplay: bibleApi,
+              bibleRDisplay: bibleRef,
+            })
+          }>
           <Text
             style={{
               fontSize: 40,
@@ -48,10 +55,16 @@ export default class Step1 extends React.Component {
           style={{
             borderBottomColor: 'black',
             borderBottomWidth: 1,
-            marginBottom: 10
+            marginBottom: 10,
           }}
         />
-        <View style={{justifyContent: 'flex-end', marginLeft: 330, marginRight: 10, marginBottom: 10}}>
+        <View
+          style={{
+            justifyContent: 'flex-end',
+            marginLeft: 330,
+            marginRight: 10,
+            marginBottom: 10,
+          }}>
           <Button
             title="Next"
             onPress={() =>

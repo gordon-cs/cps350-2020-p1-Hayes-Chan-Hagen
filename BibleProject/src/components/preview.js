@@ -26,7 +26,9 @@ export default class Preview extends React.Component {
     const backgroundImage = this.props.navigation.getParam('pic');
     const backgroundPhoto = this.props.navigation.getParam('photo');
     const biblePreview = this.props.navigation.getParam('bibleApiDone');
+    const bibleRef = this.props.navigation.getParam('bibleRDone');
     console.log(biblePreview);
+    console.log(bibleRef);
     console.log(this.props.navigation.state.params.pic);
     if (backgroundImage) {
       return (
@@ -52,6 +54,18 @@ export default class Preview extends React.Component {
               }}>
               {biblePreview}{' '}
             </Text>
+            <Text
+              style={{
+                backgroundColor: 'white',
+                fontSize: 20,
+                fontWeight: 'bold',
+                textAlign: 'center',
+                fontFamily: 'Kindly Jasmine',
+                marginLeft: 20,
+                marginRight: 20,
+              }}>
+              {bibleRef}{' '}
+            </Text>
           </ImageBackground>
           <View
             style={{
@@ -75,6 +89,7 @@ export default class Preview extends React.Component {
                 onPress={() =>
                   this.props.navigation.navigate('Step3', {
                     biblePreview,
+                    bibleRef,
                   })
                 }
               />
