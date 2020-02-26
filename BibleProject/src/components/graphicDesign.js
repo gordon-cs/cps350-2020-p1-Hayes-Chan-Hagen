@@ -28,7 +28,7 @@ export default class graphicDesign extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: background1,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -41,7 +41,7 @@ export default class graphicDesign extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: background2,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -56,7 +56,7 @@ export default class graphicDesign extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: background3,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -69,7 +69,7 @@ export default class graphicDesign extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: background4,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -84,7 +84,7 @@ export default class graphicDesign extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: background5,
                 bibleApiPreview: bibleApiGraphic,
               });
@@ -97,7 +97,7 @@ export default class graphicDesign extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: background6,
                 bibleApiPreview: bibleApiGraphic,
               });

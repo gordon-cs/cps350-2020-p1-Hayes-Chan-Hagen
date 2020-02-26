@@ -28,7 +28,7 @@ export default class photography extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: image1,
                 bibleApiPreview: bibleApiPhoto,
               });
@@ -41,7 +41,7 @@ export default class photography extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: image2,
                 bibleApiPreview: bibleApiPhoto,
               });
@@ -56,7 +56,7 @@ export default class photography extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: image3,
                 bibleApiPreview: bibleApiPhoto,
               });
@@ -69,7 +69,7 @@ export default class photography extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: image4,
                 bibleApiPreview: bibleApiPhoto,
               });
@@ -84,7 +84,7 @@ export default class photography extends React.Component {
         <View style={styles.imageFormat}>
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: image5,
                 bibleApiPreview: bibleApiPhoto,
               });
@@ -97,7 +97,7 @@ export default class photography extends React.Component {
 
           <TouchableOpacity
             onPress={() => {
-              this.setState({
+              navigate('Step2', {
                 pic: image6,
                 bibleApiPreview: bibleApiPhoto,
               });

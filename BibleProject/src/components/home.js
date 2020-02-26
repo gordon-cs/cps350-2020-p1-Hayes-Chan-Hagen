@@ -2,7 +2,7 @@
  * Got help from Dr. Tuck and Jahnuel
  */
 import React, {Component} from 'react';
-import {Image, View, Text, TouchableOpacity, Dimensions} from 'react-native';
+import {Image, View, Text, TouchableOpacity} from 'react-native';
 import styles from '../styles';
 import DailyVerse from './dailyVerse';
 import BibleRef from './bibleRef';
@@ -104,7 +104,7 @@ export default class home extends Component {
             <TouchableOpacity
               style={styles.beginButton}
               onPress={() =>
-                this.props.navigation.navigate('Purpose', {
+                this.props.navigation.navigate('Step1', {
                   bibleApi: this.state.BibleData.verse.details.text,
                 })
               }>

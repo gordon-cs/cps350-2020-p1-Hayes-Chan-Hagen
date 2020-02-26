@@ -3,14 +3,22 @@ import {Button, View, Text, Dimensions, TouchableOpacity} from 'react-native';
 import styles from '../styles';
 
 export default class style extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      //pic: null,
+      bibleApiPreview: null,
+    };
+  }
+
   static navigationOptions = {
     title: 'Style',
   };
 
   render() {
     const {navigate} = this.props.navigation;
-    const bibleApiFont = this.props.navigation.getParam('bibleApiStyle');
-    console.log(bibleApiFont);
+    const bibleApiStyle = this.props.navigation.getParam('bibleApiStep1');
+    console.log(bibleApiStyle);
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -19,7 +27,7 @@ export default class style extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }} //navigate needs to bring up check option for either going to share or create
-          onPress={() => navigate('Graphic', {bibleApiDesign: bibleApiFont})}>
+          onPress={() => navigate('Graphic', {bibleApiDesign: bibleApiStyle})}>
           <Text
             style={{
               fontSize: 40,
@@ -40,7 +48,7 @@ export default class style extends React.Component {
             backgroundColor: '#e1f2fb',
             width: Dimensions.get('window').width,
           }}
-          onPress={() => navigate('Photo', {bibleApiDesign: bibleApiFont})}>
+          onPress={() => navigate('Photo', {bibleApiDesign: bibleApiStyle})}>
           <Text
             style={{
               fontSize: 40,
@@ -54,32 +62,6 @@ export default class style extends React.Component {
             Photography{' '}
           </Text>
         </TouchableOpacity>
-
-        <View style={styles.buttonFormat}>
-          <Button
-            title="Purpose"
-            color="#d4d7dd"
-            onPress={() => navigate('Purpose')}
-          />
-
-          <Button
-            title="Style"
-            color="#738598"
-            onPress={() => navigate('Style')}
-          />
-
-          <Button
-            title="Font"
-            color="#3c4f65"
-            onPress={() => navigate('Font')}
-          />
-
-          <Button
-            title="Preview"
-            color="#f5c16c"
-            onPress={() => navigate('Preview')}
-          />
-        </View>
       </View>
     );
   }

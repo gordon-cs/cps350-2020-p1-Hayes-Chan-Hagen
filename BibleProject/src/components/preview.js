@@ -37,6 +37,7 @@ export default class Preview extends React.Component {
                 fontSize: 20,
                 fontWeight: 'bold',
                 textAlign: 'center',
+                fontFamily: 'Kindly Jasmine',
                 marginLeft: 20,
                 marginRight: 20,
               }}>
