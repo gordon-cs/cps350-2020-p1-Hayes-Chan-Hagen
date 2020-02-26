@@ -106,6 +106,7 @@ export default class home extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Step1', {
                   bibleApi: this.state.BibleData.verse.details.text,
+                  bibleRef: this.state.BibleData.verse.details.reference
                 })
               }>
               <Text style={{fontSize: 15}}> CLICK TO BEGIN DESIGNING </Text>

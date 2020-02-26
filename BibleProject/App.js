@@ -11,6 +11,7 @@ import HomeScreen from './src/components/home';
 import step1 from './src/components/step1';
 import step2 from './src/components/step2';
 import step3 from './src/components/step3';
+import step4 from './src/components/step4';
 import calligraphy from './src/components/calligraphy';
 import simple from './src/components/simple';
 import graphicDesign from './src/components/graphicDesign';
@@ -35,6 +36,7 @@ const MainNavigator = createStackNavigator(
     Simple: {screen: simple},
     Step3: {screen: step3},
     Preview: {screen: preview},
+    Step4: {screen: step4},
   },
   {
     initialRouteName: 'Home',
