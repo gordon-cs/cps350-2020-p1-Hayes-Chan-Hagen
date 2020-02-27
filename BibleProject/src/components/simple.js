@@ -117,6 +117,7 @@ export default class Simple extends React.Component {
             paddingBottom: 10,
             marginLeft: 10,
             marginRight: 10,
+            alignItems: 'center',
           }}>
           <TouchableOpacity
             onPress={() => this.props.navigation.navigate('Font')}>
@@ -127,6 +128,8 @@ export default class Simple extends React.Component {
               direction={'left'}
             />
           </TouchableOpacity>
+          <Text style={{fontSize: 22, paddingRight: 90}}>Back</Text>
+          <Text style={{fontSize: 22, paddingLeft: 90}}>Next</Text>
           <TouchableOpacity
             onPress={() =>
               this.props.navigation.navigate('Step3', {

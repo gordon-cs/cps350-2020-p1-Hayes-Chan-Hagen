@@ -65,7 +65,10 @@ export default class Step2 extends React.Component {
             marginLeft: 345,
             marginRight: 10,
             marginBottom: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
           }}>
+          <Text style={{fontSize: 22, paddingRight: 10}}>Next</Text>
           <TouchableOpacity
             onPress={() =>
               this.props.navigation.navigate('Font', {

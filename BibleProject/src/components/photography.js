@@ -154,6 +154,8 @@ export default class photography extends React.Component {
             marginLeft: 10,
             marginRight: 330,
             marginBottom: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
           }}>
           <TouchableOpacity
             onPress={() =>
@@ -169,6 +171,7 @@ export default class photography extends React.Component {
               direction={'left'}
             />
           </TouchableOpacity>
+          <Text style={{fontSize: 22, paddingLeft: 10}}>Back</Text>
         </View>
       </View>
     );
