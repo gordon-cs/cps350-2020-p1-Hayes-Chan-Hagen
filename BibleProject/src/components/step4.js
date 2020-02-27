@@ -11,7 +11,7 @@ export default class Step4 extends React.Component {
     };
   }
   static navigationOptions = {
-    title: 'Step4',
+    header: null,
   };
 
   shareImage() {

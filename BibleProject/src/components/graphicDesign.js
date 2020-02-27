@@ -20,7 +20,7 @@ export default class graphicDesign extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'Graphic Design',
+    header: null,
   };
   render() {
     const {navigate} = this.props.navigation;

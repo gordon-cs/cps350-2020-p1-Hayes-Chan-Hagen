@@ -3,7 +3,7 @@ import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
 
 export default class style extends React.Component {
   static navigationOptions = {
-    title: 'Style',
+    header: null,
   };
 
   render() {

@@ -17,7 +17,7 @@ export default class Preview extends React.Component {
     };
   }
   static navigationOptions = {
-    title: 'Preview',
+    header: null,
   };
 
   render() {

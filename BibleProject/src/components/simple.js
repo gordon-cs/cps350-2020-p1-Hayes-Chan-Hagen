@@ -10,7 +10,7 @@ export default class Simple extends React.Component {
     };
   }
   static navigationOptions = {
-    title: 'Simple',
+    header: null,
   };
   render() {
     const {navigate} = this.props.navigation;

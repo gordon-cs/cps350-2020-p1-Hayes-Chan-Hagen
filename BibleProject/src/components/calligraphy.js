@@ -10,7 +10,7 @@ export default class Calligraphy extends React.Component {
     };
   }
   static navigationOptions = {
-    title: 'Calligraphy',
+    header: null,
   };
   render() {
     const {navigate} = this.props.navigation;

@@ -9,7 +9,7 @@ export default class font extends React.Component {
     };
   }
   static navigationOptions = {
-    title: 'Font',
+    header: null,
   };
   render() {
     const {navigate} = this.props.navigation;

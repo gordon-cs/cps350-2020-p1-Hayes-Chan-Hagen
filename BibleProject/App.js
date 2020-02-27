@@ -25,7 +25,10 @@ export default class App extends Component {
 
 const MainNavigator = createStackNavigator(
   {
-    Home: {screen: HomeScreen},
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {header: null},
+    },
     Step1: {screen: step1},
     Style: {screen: style},
     Graphic: {screen: graphicDesign},

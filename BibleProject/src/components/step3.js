@@ -10,7 +10,7 @@ export default class Step3 extends React.Component {
     };
   }
   static navigationOptions = {
-    title: 'Step3',
+    header: null,
   };
   render() {
     const {navigate} = this.props.navigation;

@@ -20,7 +20,7 @@ export default class photography extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'Photography',
+    header: null,
   };
   render() {
     const {navigate} = this.props.navigation;
