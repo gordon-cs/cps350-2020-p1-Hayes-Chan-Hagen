@@ -36,7 +36,7 @@ export default class Simple extends React.Component {
           }>
           <Text
             style={{
-              fontSize: 25,
+              fontSize: 35,
               textAlign: 'center',
               paddingBottom: 30,
               paddingTop: 30,
@@ -45,8 +45,8 @@ export default class Simple extends React.Component {
           </Text>
           <Text
             style={{
-              fontSize: 25,
-              //fontFamily: '',
+              fontSize: 45,
+              fontFamily: 'Searocks OTF',
               backgroundColor: '#465881',
               textAlign: 'center',
               borderWidth: 1,
@@ -63,40 +63,40 @@ export default class Simple extends React.Component {
             <Text
               style={{
                 paddingTop: 50,
-                fontSize: 35,
+                fontSize: 50,
                 textAlign: 'center',
                 alignSelf: 'center',
-                //fontFamily: 'Kindly Jasmine',
+                fontFamily: 'Searocks OTF',
               }}>
               Aa Bb Cc Dd Ee Ff Gg
             </Text>
             <Text
               style={{
-                paddingTop: 10,
-                fontSize: 35,
+                paddingTop: 15,
+                fontSize: 50,
                 textAlign: 'center',
                 alignSelf: 'center',
-                //fontFamily: 'Kindly Jasmine',
+                fontFamily: 'Searocks OTF',
               }}>
               Hh Ii Jj Kk Ll Mm Nn Oo
             </Text>
             <Text
               style={{
-                paddingTop: 10,
-                fontSize: 35,
+                paddingTop: 15,
+                fontSize: 50,
                 textAlign: 'center',
                 alignSelf: 'center',
-                //fontFamily: 'Kindly Jasmine',
+                fontFamily: 'Searocks OTF',
               }}>
               Pp Qq Rr Ss Tt Uu
             </Text>
             <Text
               style={{
-                paddingTop: 10,
-                fontSize: 35,
+                paddingTop: 15,
+                fontSize: 50,
                 textAlign: 'center',
                 alignSelf: 'center',
-                //fontFamily: 'Kindly Jasmine',
+                fontFamily: 'Searocks OTF',
               }}>
               Vv Ww Xx Yy Zz
             </Text>
