@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Image, TouchableOpacity, Text} from 'react-native';
+import {View, Image, TouchableOpacity, Text} from 'react-native';
 import styles from '../styles';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
@@ -7,6 +7,7 @@ import image3 from './images/image3.png';
 import image4 from './images/image4.png';
 import image5 from './images/image5.png';
 import image6 from './images/image6.png';
+import Triangle from 'react-native-triangle';
 
 export default class photography extends React.Component {
   constructor(props) {
@@ -154,14 +155,20 @@ export default class photography extends React.Component {
             marginRight: 330,
             marginBottom: 10,
           }}>
-          <Button
-            title="Back"
+          <TouchableOpacity
             onPress={() =>
               this.props.navigation.navigate('Style', {
                 bibleApiPreview: bibleApiPhoto,
+                bibleRPreview: bibleRPhoto,
               })
-            }
-          />
+            }>
+            <Triangle
+              width={40}
+              height={40}
+              color={'white'}
+              direction={'left'}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );

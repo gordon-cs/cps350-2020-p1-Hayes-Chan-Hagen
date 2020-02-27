@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Image, TouchableOpacity, Text} from 'react-native';
+import {View, Image, TouchableOpacity, Text} from 'react-native';
 import styles from '../styles';
 import background1 from './images/background1.png';
 import background2 from './images/background2.png';
@@ -7,6 +7,7 @@ import background3 from './images/background3.png';
 import background4 from './images/background4.png';
 import background5 from './images/background5.png';
 import background6 from './images/background6.png';
+import Triangle from 'react-native-triangle';
 
 export default class graphicDesign extends React.Component {
   constructor(props) {
@@ -173,15 +174,21 @@ export default class graphicDesign extends React.Component {
             marginRight: 330,
             marginBottom: 10,
           }}>
-          <Button
-            title="Back"
+          <TouchableOpacity
             onPress={() =>
               this.props.navigation.navigate('Style', {
+                pic: background6,
                 bibleApiPreview: bibleApiGraphic,
                 bibleRPreview: bibleRGraphic,
               })
-            }
-          />
+            }>
+            <Triangle
+              width={40}
+              height={40}
+              color={'white'}
+              direction={'left'}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );

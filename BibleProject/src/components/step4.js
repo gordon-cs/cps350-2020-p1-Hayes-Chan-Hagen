@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Text, TouchableOpacity, Share} from 'react-native';
-import styles from '../styles';
+import {View, Text, TouchableOpacity, Share} from 'react-native';
 //import Share from 'react-native-share';
 //import ImgToBase64 from 'react-native-image-base64';
 

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Text, Dimensions, TouchableOpacity} from 'react-native';
-import styles from '../styles';
+import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
 
 export default class style extends React.Component {
   static navigationOptions = {

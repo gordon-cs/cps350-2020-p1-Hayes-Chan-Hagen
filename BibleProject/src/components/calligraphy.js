@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
-import styles from '../styles';
+import {View, Text, TouchableOpacity} from 'react-native';
+import Triangle from 'react-native-triangle';
 
 export default class Calligraphy extends React.Component {
   constructor(props) {
@@ -120,24 +120,30 @@ export default class Calligraphy extends React.Component {
             marginLeft: 10,
             marginRight: 10,
           }}>
-          <View style={{justifyContent: 'flex-start'}}>
-            <Button
-              title="Back"
-              onPress={() => this.props.navigation.navigate('Font')}
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Font')}>
+            <Triangle
+              width={40}
+              height={40}
+              color={'white'}
+              direction={'left'}
             />
-          </View>
-          <View style={{justifyContent: 'flex-end'}}>
-            <Button
-              title="Next"
-              onPress={() =>
-                this.props.navigation.navigate('Step3', {
-                  pic: this.props.navigation.state.params.pic,
-                  bibleApiResult: bibleApiPreview,
-                  bibleRResult: bibleRPreview,
-                })
-              }
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              this.props.navigation.navigate('Step3', {
+                pic: this.props.navigation.state.params.pic,
+                bibleApiResult: bibleApiPreview,
+                bibleRResult: bibleRPreview,
+              })
+            }>
+            <Triangle
+              width={40}
+              height={40}
+              color={'white'}
+              direction={'right'}
             />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     );

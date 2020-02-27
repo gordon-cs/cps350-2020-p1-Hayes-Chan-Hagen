@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
-import styles from '../styles';
+import {View, Text, TouchableOpacity, Dimensions} from 'react-native';
 
 export default class font extends React.Component {
   constructor(props) {

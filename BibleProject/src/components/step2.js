@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Button, View, Text, TouchableOpacity, Dimensions} from 'react-native';
-import styles from '../styles';
+import {View, Text, TouchableOpacity} from 'react-native';
+import Triangle from 'react-native-triangle';
 
 export default class Step2 extends React.Component {
   constructor(props) {
@@ -62,20 +62,25 @@ export default class Step2 extends React.Component {
         <View
           style={{
             justifyContent: 'flex-end',
-            marginLeft: 330,
+            marginLeft: 345,
             marginRight: 10,
             marginBottom: 10,
           }}>
-          <Button
-            title="Next"
+          <TouchableOpacity
             onPress={() =>
               this.props.navigation.navigate('Font', {
                 pic: this.props.navigation.state.params.pic,
                 bibleApiType: bibleApiText,
                 bibleRType: bibleRText,
               })
-            }
-          />
+            }>
+            <Triangle
+              width={40}
+              height={40}
+              color={'white'}
+              direction={'right'}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );
