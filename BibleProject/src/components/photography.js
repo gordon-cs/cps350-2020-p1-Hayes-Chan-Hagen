@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Image, TouchableOpacity, Text} from 'react-native';
+import {View, Image, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import styles from '../styles';
 import image1 from './images/image1.png';
 import image2 from './images/image2.png';
@@ -34,118 +34,150 @@ export default class photography extends React.Component {
           style={{
             fontSize: 20,
             textAlign: 'center',
-            paddingBottom: 10,
-            paddingTop: 10,
+            paddingTop: 5,
           }}>
           Click on your preferred design
         </Text>
-        <View
-          style={{
-            flex: 5,
-            flexDirection: 'row',
-            marginVertical: 10,
-            justifyContent: 'center',
-          }}>
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: image1,
-                bibleApiPreview: bibleApiPhoto,
-                bibleRPreview: bibleRPhoto,
-              });
-            }}>
-            <Image
-              source={image1}
-              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
-            />
-          </TouchableOpacity>
+        <View style={design.bottom}>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: image1,
+                    bibleApiPreview: bibleApiPhoto,
+                    bibleRPreview: bibleRPhoto,
+                  });
+                }}>
+                <Image
+                  source={image1}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: image2,
-                bibleApiPreview: bibleApiPhoto,
-                bibleRPreview: bibleRPhoto,
-              });
-            }}>
-            <Image
-              source={image2}
-              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
-            />
-          </TouchableOpacity>
-        </View>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: image2,
+                    bibleApiPreview: bibleApiPhoto,
+                    bibleRPreview: bibleRPhoto,
+                  });
+                }}>
+                <Image
+                  source={image2}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-        <View style={styles.imageFormat}>
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: image3,
-                bibleApiPreview: bibleApiPhoto,
-                bibleRPreview: bibleRPhoto,
-              });
-            }}>
-            <Image
-              source={image3}
-              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
-            />
-          </TouchableOpacity>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: image3,
+                    bibleApiPreview: bibleApiPhoto,
+                    bibleRPreview: bibleRPhoto,
+                  });
+                }}>
+                <Image
+                  source={image3}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: image4,
-                bibleApiPreview: bibleApiPhoto,
-                bibleRPreview: bibleRPhoto,
-              });
-            }}>
-            <Image
-              source={image4}
-              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
-            />
-          </TouchableOpacity>
-        </View>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: image4,
+                    bibleApiPreview: bibleApiPhoto,
+                    bibleRPreview: bibleRPhoto,
+                  });
+                }}>
+                <Image
+                  source={image4}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-        <View style={styles.imageFormat}>
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: image5,
-                bibleApiPreview: bibleApiPhoto,
-                bibleRPreview: bibleRPhoto,
-              });
-            }}>
-            <Image
-              source={image5}
-              style={{marginRight: 60, marginLeft: 60, width: 100, height: 180}}
-            />
-          </TouchableOpacity>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: image5,
+                    bibleApiPreview: bibleApiPhoto,
+                    bibleRPreview: bibleRPhoto,
+                  });
+                }}>
+                <Image
+                  source={image5}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: image6,
-                bibleApiPreview: bibleApiPhoto,
-                bibleRPreview: bibleRPhoto,
-              });
-            }}>
-            <Image
-              source={image6}
-              style={{
-                marginRight: 60,
-                marginLeft: 60,
-                width: 100,
-                height: 180,
-              }}
-            />
-          </TouchableOpacity>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: image6,
+                    bibleApiPreview: bibleApiPhoto,
+                    bibleRPreview: bibleRPhoto,
+                  });
+                }}>
+                <Image
+                  source={image6}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
 
         <View
           style={{
             borderBottomColor: 'black',
             borderBottomWidth: 1,
-            marginBottom: 10,
-            marginTop: 70,
+            height: '16%',
+            marginBottom: 5,
           }}
         />
         <View
@@ -165,8 +197,8 @@ export default class photography extends React.Component {
               })
             }>
             <Triangle
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               color={'white'}
               direction={'left'}
             />
@@ -177,3 +209,22 @@ export default class photography extends React.Component {
     );
   }
 }
+
+const design = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  bottom: {
+    height: '75%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingBottom: 30,
+  },
+  bottomItem: {
+    width: '34%',
+    height: '40%',
+    padding: 15,
+    marginHorizontal: '.5%',
+  },
+});

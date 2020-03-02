@@ -1,15 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-//import styles from '../styles';
 import Triangle from 'react-native-triangle';
 
 export default class Step1 extends React.Component {
-  /*constructor(props) {
-    super(props);
-    this.state = {
-      bibleApiDisplay: null,
-    };
-  }*/
   static navigationOptions = {
     header: null,
   };

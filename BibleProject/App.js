@@ -27,7 +27,7 @@ const MainNavigator = createStackNavigator(
   {
     Home: {
       screen: HomeScreen,
-      navigationOptions: {header: null},
+      navigationOptions: {headerShown: false},
     },
     Step1: {screen: step1},
     Style: {screen: style},

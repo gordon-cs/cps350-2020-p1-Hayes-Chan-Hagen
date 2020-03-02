@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {View, Image, TouchableOpacity, Text} from 'react-native';
-import styles from '../styles';
+import {View, Image, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import background1 from './images/background1.png';
 import background2 from './images/background2.png';
 import background3 from './images/background3.png';
@@ -34,137 +33,150 @@ export default class graphicDesign extends React.Component {
           style={{
             fontSize: 20,
             textAlign: 'center',
-            paddingBottom: 10,
-            paddingTop: 10,
+            paddingTop: 5,
           }}>
           Click on your preferred design
         </Text>
-        <View
-          style={{
-            flex: 5,
-            flexDirection: 'row',
-            marginVertical: 10,
-            justifyContent: 'center',
-          }}>
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: background1,
-                bibleApiPreview: bibleApiGraphic,
-                bibleRPreview: bibleRGraphic,
-              });
-            }}>
-            <Image
-              source={background1}
-              style={{marginRight: 60, marginLeft: 60, width: 90, height: 170}}
-            />
-          </TouchableOpacity>
+        <View style={design.bottom}>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: background1,
+                    bibleApiPreview: bibleApiGraphic,
+                    bibleRPreview: bibleRGraphic,
+                  });
+                }}>
+                <Image
+                  source={background1}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: background2,
-                bibleApiPreview: bibleApiGraphic,
-                bibleRPreview: bibleRGraphic,
-              });
-            }}>
-            <Image
-              source={background2}
-              style={{marginRight: 60, marginLeft: 60, width: 90, height: 170}}
-            />
-          </TouchableOpacity>
-        </View>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: background2,
+                    bibleApiPreview: bibleApiGraphic,
+                    bibleRPreview: bibleRGraphic,
+                  });
+                }}>
+                <Image
+                  source={background2}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-        <View style={styles.imageFormat}>
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: background3,
-                bibleApiPreview: bibleApiGraphic,
-                bibleRPreview: bibleRGraphic,
-              });
-            }}>
-            <Image
-              source={background3}
-              style={{
-                marginTop: 5,
-                marginRight: 60,
-                marginLeft: 60,
-                width: 90,
-                height: 170,
-              }}
-            />
-          </TouchableOpacity>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: background3,
+                    bibleApiPreview: bibleApiGraphic,
+                    bibleRPreview: bibleRGraphic,
+                  });
+                }}>
+                <Image
+                  source={background3}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: background4,
-                bibleApiPreview: bibleApiGraphic,
-                bibleRPreview: bibleRGraphic,
-              });
-            }}>
-            <Image
-              source={background4}
-              style={{
-                marginTop: 5,
-                marginRight: 60,
-                marginLeft: 60,
-                width: 90,
-                height: 170,
-              }}
-            />
-          </TouchableOpacity>
-        </View>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: background4,
+                    bibleApiPreview: bibleApiGraphic,
+                    bibleRPreview: bibleRGraphic,
+                  });
+                }}>
+                <Image
+                  source={background4}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-        <View style={styles.imageFormat}>
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: background5,
-                bibleApiPreview: bibleApiGraphic,
-                bibleRPreview: bibleRGraphic,
-              });
-            }}>
-            <Image
-              source={background5}
-              style={{
-                marginTop: 10,
-                marginRight: 60,
-                marginLeft: 60,
-                width: 90,
-                height: 170,
-              }}
-            />
-          </TouchableOpacity>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: background5,
+                    bibleApiPreview: bibleApiGraphic,
+                    bibleRPreview: bibleRGraphic,
+                  });
+                }}>
+                <Image
+                  source={background5}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <TouchableOpacity
-            onPress={() => {
-              navigate('Step2', {
-                pic: background6,
-                bibleApiPreview: bibleApiGraphic,
-                bibleRPreview: bibleRGraphic,
-              });
-            }}>
-            <Image
-              source={background6}
-              style={{
-                marginTop: 10,
-                marginRight: 60,
-                marginLeft: 60,
-                width: 90,
-                height: 170,
-              }}
-            />
-          </TouchableOpacity>
+          <View style={design.bottomItem}>
+            <View style={{flex: 1}}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigate('Step2', {
+                    pic: background6,
+                    bibleApiPreview: bibleApiGraphic,
+                    bibleRPreview: bibleRGraphic,
+                  });
+                }}>
+                <Image
+                  source={background6}
+                  style={{
+                    width: '80%',
+                    height: '100%',
+                    marginBottom: 2,
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
 
         <View
           style={{
             borderBottomColor: 'black',
             borderBottomWidth: 1,
-            marginBottom: 10,
-            marginTop: 70,
+            height: '16%',
+            marginBottom: 5,
           }}
         />
         <View
@@ -185,8 +197,8 @@ export default class graphicDesign extends React.Component {
               })
             }>
             <Triangle
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               color={'white'}
               direction={'left'}
             />
@@ -197,3 +209,22 @@ export default class graphicDesign extends React.Component {
     );
   }
 }
+
+const design = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  bottom: {
+    height: '75%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingBottom: 30,
+  },
+  bottomItem: {
+    width: '34%',
+    height: '40%',
+    padding: 15,
+    marginHorizontal: '.5%',
+  },
+});

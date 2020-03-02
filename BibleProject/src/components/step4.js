@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, Share} from 'react-native';
-//import Share from 'react-native-share';
 //import ImgToBase64 from 'react-native-image-base64';
+//import RNFetchBlob from 'rn-fetch-blob';
 
 export default class Step4 extends React.Component {
   constructor(props) {
@@ -82,3 +82,4 @@ export default class Step4 extends React.Component {
     );
   }
 }
+
