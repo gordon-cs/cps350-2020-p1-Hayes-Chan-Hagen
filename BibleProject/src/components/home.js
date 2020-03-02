@@ -79,7 +79,7 @@ export default class home extends Component {
             <Image
               resizeMode={'contain'}
               style={{
-                width: '60%',
+                width: '70%',
                 height: '70%',
                 marginTop: 80,
                 alignSelf: 'center',
