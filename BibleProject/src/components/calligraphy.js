@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import Triangle from 'react-native-triangle';
 
 export default class Calligraphy extends React.Component {
@@ -19,6 +19,7 @@ export default class Calligraphy extends React.Component {
     console.log(bibleApiPreview);
     console.log(bibleRPreview);
     console.log(this.props.navigation.state.params.pic);
+    var {width} = Dimensions.get('window');
     return (
       <View style={{flex: 1, backgroundColor: '#95adbe'}}>
         <TouchableOpacity
@@ -36,10 +37,12 @@ export default class Calligraphy extends React.Component {
           }>
           <Text
             style={{
-              fontSize: 25,
+              width: Dimensions.get('window').width,
+              fontSize: 0.05 * width,
               textAlign: 'center',
               paddingBottom: 60,
               marginTop: 20,
+              alignSelf: 'center',
             }}>
             Caligraphy
           </Text>
@@ -59,23 +62,26 @@ export default class Calligraphy extends React.Component {
           <View
             style={{
               flex: 1,
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 20,
+              marginRight: 20,
             }}>
             <Text
               style={{
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.09 * width,
                 paddingTop: 70,
-                fontSize: 40,
                 textAlign: 'center',
-                alignSelf: 'center',
                 fontFamily: 'Kindly Jasmine',
               }}>
               Aa{'  '}Bb{'  '}Cc{'  '}Dd{'  '}Ee{'  '}Ff{'  '}Gg
             </Text>
             <Text
               style={{
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.09 * width,
                 paddingTop: 10,
-                fontSize: 40,
                 textAlign: 'center',
                 alignSelf: 'center',
                 fontFamily: 'Kindly Jasmine',
@@ -84,8 +90,10 @@ export default class Calligraphy extends React.Component {
             </Text>
             <Text
               style={{
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.09 * width,
                 paddingTop: 10,
-                fontSize: 40,
                 textAlign: 'center',
                 alignSelf: 'center',
                 fontFamily: 'Kindly Jasmine',
@@ -94,8 +102,10 @@ export default class Calligraphy extends React.Component {
             </Text>
             <Text
               style={{
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.09 * width,
                 paddingTop: 10,
-                fontSize: 40,
                 textAlign: 'center',
                 alignSelf: 'center',
                 fontFamily: 'Kindly Jasmine',
@@ -104,6 +114,7 @@ export default class Calligraphy extends React.Component {
             </Text>
           </View>
         </TouchableOpacity>
+
         <View
           style={{
             borderBottomColor: 'black',

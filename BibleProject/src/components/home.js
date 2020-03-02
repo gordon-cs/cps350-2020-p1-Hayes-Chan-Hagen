@@ -79,15 +79,15 @@ export default class home extends Component {
             <Image
               resizeMode={'contain'}
               style={{
-                marginTop: 50,
-                marginVertical: 20,
-                padding: '6%',
+                width: '60%',
+                height: '70%',
+                marginTop: 80,
                 alignSelf: 'center',
               }}
               source={require('./images/logo.png')}
             />
           </View>
-          <View style={{flex: 3}}>
+          <View style={{flex: 2}}>
             <DailyVerse bibleVerse={this.state.BibleData.verse.details.text} />
             <BibleRef
               bibleReference={this.state.BibleData.verse.details.reference}

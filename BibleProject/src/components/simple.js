@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import Triangle from 'react-native-triangle';
 
 export default class Simple extends React.Component {
@@ -19,6 +19,7 @@ export default class Simple extends React.Component {
     console.log(bibleApiPreview);
     console.log(bibleRPreview);
     console.log(this.props.navigation.state.params.pic);
+    var {width} = Dimensions.get('window');
     return (
       <View style={{flex: 1, backgroundColor: '#465881'}}>
         <TouchableOpacity
@@ -36,17 +37,19 @@ export default class Simple extends React.Component {
           }>
           <Text
             style={{
-              fontSize: 35,
+              width: Dimensions.get('window').width,
+              fontSize: 0.05 * width,
               textAlign: 'center',
-              paddingBottom: 30,
-              paddingTop: 30,
+              paddingBottom: 60,
+              marginTop: 20,
+              alignSelf: 'center',
             }}>
             Simple
           </Text>
           <Text
             style={{
-              fontSize: 45,
-              fontFamily: 'Searocks OTF',
+              fontSize: 40,
+              fontFamily: 'Quicksand-VariableFont:wght',
               backgroundColor: '#465881',
               textAlign: 'center',
               borderWidth: 1,
@@ -54,7 +57,7 @@ export default class Simple extends React.Component {
               padding: 15,
             }}>
             {' '}
-            Searocks Regular{' '}
+            Quicksand{' '}
           </Text>
           <View
             style={{
@@ -63,42 +66,50 @@ export default class Simple extends React.Component {
             <Text
               style={{
                 paddingTop: 50,
-                fontSize: 50,
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.065 * width,
                 textAlign: 'center',
                 alignSelf: 'center',
-                fontFamily: 'Searocks OTF',
+                fontFamily: 'Quicksand-VariableFont:wght',
               }}>
-              Aa Bb Cc Dd Ee Ff Gg
+              Aa{'  '}Bb{'  '}Cc{'  '}Dd{'  '}Ee{'  '}Ff{'  '}Gg
             </Text>
             <Text
               style={{
                 paddingTop: 15,
-                fontSize: 50,
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.065 * width,
                 textAlign: 'center',
                 alignSelf: 'center',
-                fontFamily: 'Searocks OTF',
+                fontFamily: 'Quicksand-VariableFont:wght',
               }}>
-              Hh Ii Jj Kk Ll Mm Nn Oo
+              Hh{'  '}Ii{'  '}Jj{'  '}Kk{'  '}Ll{'  '}Mm{'  '}Nn{'  '}Oo
             </Text>
             <Text
               style={{
                 paddingTop: 15,
-                fontSize: 50,
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.065 * width,
                 textAlign: 'center',
                 alignSelf: 'center',
-                fontFamily: 'Searocks OTF',
+                fontFamily: 'Quicksand-VariableFont:wght',
               }}>
-              Pp Qq Rr Ss Tt Uu
+              Pp{'  '}Qq{'  '}Rr{'  '}Ss{'  '}Tt{'  '}Uu
             </Text>
             <Text
               style={{
                 paddingTop: 15,
-                fontSize: 50,
+                marginVertical: 5,
+                width: Dimensions.get('window').width,
+                fontSize: 0.065 * width,
                 textAlign: 'center',
                 alignSelf: 'center',
-                fontFamily: 'Searocks OTF',
+                fontFamily: 'Quicksand-VariableFont:wght',
               }}>
-              Vv Ww Xx Yy Zz
+              Vv{'  '}Ww{'  '}Xx{'  '}Yy{'  '}Zz
             </Text>
           </View>
         </TouchableOpacity>
