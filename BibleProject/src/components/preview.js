@@ -4,8 +4,9 @@ import {
   Image,
   Text,
   Dimensions,
-  ImageBackground,
   TouchableOpacity,
+  StyleSheet,
+  ImageBackground,
 } from 'react-native';
 import Triangle from 'react-native-triangle';
 
@@ -31,45 +32,60 @@ export default class Preview extends React.Component {
     console.log(this.props.navigation.state.params.pic);
     if (backgroundImage) {
       return (
-        <View style={{flex: 1}}>
-          <ImageBackground
-            style={{
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: Dimensions.get('window').width,
-              resizeMode: 'cover',
-            }}
-            source={backgroundImage}>
-            <Text
+        <View style={{flex: 1, backgroundColor: 'white'}}>
+          <View style={design.bottom}>
+            <View
               style={{
-                backgroundColor: 'white',
-                fontSize: 20,
-                fontWeight: 'bold',
-                textAlign: 'center',
-                fontFamily: 'Kindly Jasmine',
-                marginLeft: 20,
-                marginRight: 20,
+                flex: 1,
+                marginTop: 40,
+                //width: Dimensions.get('window').width,
+                //height: '30%'
+                //borderColor: 'white',
+                //borderWidth: 20,
               }}>
-              {biblePreview}{' '}
-            </Text>
-            <Text
-              style={{
-                backgroundColor: 'white',
-                fontSize: 20,
-                fontWeight: 'bold',
-                textAlign: 'center',
-                fontFamily: 'Kindly Jasmine',
-                marginLeft: 20,
-                marginRight: 20,
-              }}>
-              {bibleRef}{' '}
-            </Text>
-          </ImageBackground>
+              <ImageBackground
+                source={backgroundImage}
+                style={{
+                  flex: 1,
+                  padding: 10,
+                  justifyContent: 'center',
+                  //width: Dimensions.get('window').width,
+                  //resizeMode: 'cover',
+                }}>
+                <Text
+                  style={{
+                    backgroundColor: 'white',
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    fontFamily: 'Kindly Jasmine',
+                    marginLeft: 20,
+                    marginRight: 20,
+                  }}>
+                  {biblePreview}{' '}
+                </Text>
+                <Text
+                  style={{
+                    backgroundColor: 'white',
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    fontFamily: 'Kindly Jasmine',
+                    marginLeft: 20,
+                    marginRight: 20,
+                  }}>
+                  {bibleRef}{' '}
+                </Text>
+              </ImageBackground>
+            </View>
+          </View>
+
           <View
             style={{
               borderBottomColor: 'black',
               borderBottomWidth: 1,
+              height: '1%',
+              marginBottom: 20,
             }}
           />
           <View
@@ -129,3 +145,12 @@ export default class Preview extends React.Component {
     }
   }
 }
+
+const design = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  bottom: {
+    height: '92%',
+  },
+});
