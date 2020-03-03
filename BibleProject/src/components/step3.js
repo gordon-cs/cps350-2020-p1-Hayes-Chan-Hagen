@@ -80,8 +80,8 @@ export default class Step3 extends React.Component {
             onPress={() =>
               this.props.navigation.navigate('Preview', {
                 pic: this.props.navigation.state.params.pic,
-                bibleApiDone: bibleApiShow,
-                bibleRDone: bibleRShow,
+                bibleApiResult: bibleApiPreview,
+                bibleRResult: bibleRPreview,
               })
             }>
             <Triangle
