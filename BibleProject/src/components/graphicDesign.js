@@ -175,7 +175,7 @@ export default class graphicDesign extends React.Component {
           style={{
             borderBottomColor: 'black',
             borderBottomWidth: 1,
-            height: '16%',
+            height: '14%',
             marginBottom: 5,
           }}
         />

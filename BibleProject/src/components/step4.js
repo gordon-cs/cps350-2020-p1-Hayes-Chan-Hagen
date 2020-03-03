@@ -52,7 +52,7 @@ export default class Step4 extends React.Component {
               marginBottom: 30,
             }}>
             {' '}
-            Step 4: Finsihed{' '}
+            Step 4: Finished{' '}
           </Text>
           <Text style={{paddingTop: 40, fontSize: 22, textAlign: 'center'}}>
             Save your image to share and send{' '}

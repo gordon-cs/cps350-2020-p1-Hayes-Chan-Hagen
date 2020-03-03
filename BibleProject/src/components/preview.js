@@ -36,64 +36,49 @@ export default class Preview extends React.Component {
         <View style={{flex: 1}}>
           <View style={{flex: 1, backgroundColor: 'white'}}>
             <View style={design.bottom}>
-              <View
+              <ImageBackground
+                source={backgroundImage}
                 style={{
                   flex: 1,
-                  marginTop: 40,
-                  //width: Dimensions.get('window').width,
-                  //height: '30%'
-                  //borderColor: 'white',
-                  //borderWidth: 20,
+                  padding: 10,
+                  justifyContent: 'center',
                 }}>
-                <ImageBackground
-                  source={backgroundImage}
+                <View
                   style={{
-                    flex: 1,
-                    padding: 10,
+                    backgroundColor: 'white',
                     justifyContent: 'center',
-                    //width: Dimensions.get('window').width,
-                    //resizeMode: 'cover',
+                    marginLeft: 20,
+                    marginRight: 20,
+                    padding: 10,
                   }}>
-                  <View
+                  <Text
                     style={{
                       backgroundColor: 'white',
-                      flex: 0.2,
-                      justifyContent: 'center',
+                      fontSize: 20,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                      fontFamily: 'Kindly Jasmine',
                       marginLeft: 20,
                       marginRight: 20,
-                      padding: 10,
+                      color: 'black',
                     }}>
-                    <Text
-                      style={{
-                        //flex: .2,
-                        //backgroundColor: 'white',
-                        fontSize: 20,
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                        fontFamily: 'Kindly Jasmine',
-                        marginLeft: 20,
-                        marginRight: 20,
-                        color: 'black',
-                      }}>
-                      {biblePreview}{' '}
-                    </Text>
-                    <Text
-                      style={{
-                        //flex: .2,
-                        //backgroundColor: 'white',
-                        fontSize: 20,
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                        fontFamily: 'Kindly Jasmine',
-                        marginLeft: 20,
-                        marginRight: 20,
-                        color: 'black',
-                      }}>
-                      {bibleRef}{' '}
-                    </Text>
-                  </View>
-                </ImageBackground>
-              </View>
+                    {biblePreview}{' '}
+                  </Text>
+                  <Text
+                    style={{
+                      backgroundColor: 'white',
+                      fontSize: 20,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                      fontFamily: 'Kindly Jasmine',
+                      marginLeft: 20,
+                      marginRight: 20,
+                      color: 'black',
+                    }}>
+                    {bibleRef}{' '}
+                  </Text>
+                </View>
+              </ImageBackground>
             </View>
           </View>
 
@@ -103,16 +88,14 @@ export default class Preview extends React.Component {
                 borderBottomColor: 'black',
                 borderBottomWidth: 1,
                 height: '1%',
-                //marginBottom: 1,
               }}
             />
             <View
               style={{
-                //flex: 1,
                 flexDirection: 'row',
                 paddingTop: 10,
                 justifyContent: 'space-between',
-                paddingBottom: 10,
+                paddingBottom: 46,
                 marginLeft: 10,
                 marginRight: 10,
                 alignItems: 'center',
@@ -166,10 +149,7 @@ export default class Preview extends React.Component {
 }
 
 const design = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   bottom: {
-    height: '92%',
+    height: '100%',
   },
 });

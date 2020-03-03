@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import Triangle from 'react-native-triangle';
 
 export default class Step1 extends React.Component {
@@ -26,24 +26,26 @@ export default class Step1 extends React.Component {
               bibleRDisplay: bibleRef,
             })
           }>
-          <Text
-            style={{
-              fontSize: 40,
-              backgroundColor: '#95adbe',
-              textAlign: 'center',
-              borderWidth: 1,
-              padding: 35,
-            }}>
-            {' '}
-            Step 1: Style{' '}
-          </Text>
-          <Text style={{paddingTop: 40, fontSize: 30, textAlign: 'center'}}>
-            Pick the style
-          </Text>
-          <Text style={{paddingTop: 10, fontSize: 30, textAlign: 'center'}}>
-            of your layout
-          </Text>
+          <View style={styles.outerBorder}>
+            <View style={styles.innerBorder}>
+              <Text
+                style={{
+                  fontSize: 40,
+                  textAlign: 'center',
+                }}>
+                {' '}
+                Step 1: Style{' '}
+              </Text>
+              <Text style={{paddingTop: 40, fontSize: 30, textAlign: 'center'}}>
+                Pick the style
+              </Text>
+              <Text style={{paddingTop: 10, fontSize: 30, textAlign: 'center'}}>
+                of your layout
+              </Text>
+            </View>
+          </View>
         </TouchableOpacity>
+
         <View
           style={{
             borderBottomColor: 'black',
@@ -80,3 +82,20 @@ export default class Step1 extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  outerBorder: {
+    borderWidth: 4,
+    borderColor: '#ffd369',
+    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  innerBorder: {
+    borderWidth: 4,
+    borderColor: '#e1f2fb',
+    padding: 35,
+    paddingTop: 150,
+    paddingBottom: 150,
+  },
+});
