@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity, Share} from 'react-native';
+import {View, Text, TouchableOpacity, Share, StyleSheet} from 'react-native';
 //import ImgToBase64 from 'react-native-image-base64';
 //import RNFetchBlob from 'rn-fetch-blob';
 
@@ -40,46 +40,59 @@ export default class Step4 extends React.Component {
             justifyContent: 'center',
             alignSelf: 'center',
           }}>
-          <Text
-            style={{
-              fontSize: 25,
-              backgroundColor: '#95adbe',
-              textAlign: 'center',
-              borderWidth: 1,
-              padding: 20,
-              marginLeft: 20,
-              marginRight: 20,
-              marginBottom: 30,
-            }}>
-            {' '}
-            Step 4: Finished{' '}
-          </Text>
-          <Text style={{paddingTop: 40, fontSize: 22, textAlign: 'center'}}>
-            Save your image to share and send{' '}
-          </Text>
-          <Text style={{paddingTop: 10, fontSize: 22, textAlign: 'center'}}>
-            or save as a new screensaver{' '}
-          </Text>
+          <View style={styles.outerBorder}>
+            <View style={styles.innerBorder}>
+              <Text
+                style={{
+                  fontSize: 25,
+                  textAlign: 'center',
+                }}>
+                {' '}
+                Step 4: Finished{' '}
+              </Text>
+              <Text style={{paddingTop: 40, fontSize: 22, textAlign: 'center'}}>
+                Save your image to share and send{' '}
+              </Text>
+              <Text style={{paddingTop: 10, fontSize: 22, textAlign: 'center'}}>
+                or save as a new screensaver{' '}
+              </Text>
+
+              <TouchableOpacity onPress={this.shareImage}>
+                <Text
+                  style={{
+                    fontSize: 25,
+                    backgroundColor: '#465881',
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    borderWidth: 1,
+                    padding: 15,
+                    marginTop: 50,
+                  }}>
+                  {' '}
+                  Press Here{' '}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
-        <TouchableOpacity onPress={this.shareImage}>
-          <Text
-            style={{
-              fontSize: 25,
-              backgroundColor: '#465881',
-              alignSelf: 'center',
-              textAlign: 'center',
-              borderWidth: 1,
-              padding: 20,
-              marginBottom: 120,
-              marginLeft: 20,
-              marginRight: 20,
-            }}>
-            {' '}
-            Press Here{' '}
-          </Text>
-        </TouchableOpacity>
       </View>
     );
   }
 }
 
+const styles = StyleSheet.create({
+  outerBorder: {
+    borderWidth: 4,
+    borderColor: '#ffd369',
+    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  innerBorder: {
+    borderWidth: 4,
+    borderColor: '#e1f2fb',
+    padding: 5,
+    paddingTop: 150,
+    paddingBottom: 150,
+  },
+});

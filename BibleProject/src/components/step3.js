@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import Triangle from 'react-native-triangle';
 
 export default class Step3 extends React.Component {
@@ -34,31 +34,30 @@ export default class Step3 extends React.Component {
               bibleRDone: bibleRShow,
             })
           }>
-          <Text
-            style={{
-              fontSize: 25,
-              backgroundColor: '#95adbe',
-              textAlign: 'center',
-              borderWidth: 1,
-              padding: 20,
-              marginLeft: 20,
-              marginRight: 20,
-            }}>
-            {' '}
-            Step 3: Preview Your Design{' '}
-          </Text>
-          <Text style={{paddingTop: 40, fontSize: 25, textAlign: 'center'}}>
-            Preview how your decisions
-          </Text>
-          <Text style={{paddingTop: 10, fontSize: 25, textAlign: 'center'}}>
-            created your design.
-          </Text>
-          <Text style={{paddingTop: 10, fontSize: 25, textAlign: 'center'}}>
-            Not happy? Click back and make
-          </Text>
-          <Text style={{paddingTop: 10, fontSize: 25, textAlign: 'center'}}>
-            changes!
-          </Text>
+          <View style={styles.outerBorder}>
+            <View style={styles.innerBorder}>
+              <Text
+                style={{
+                  fontSize: 23,
+                  textAlign: 'center',
+                }}>
+                {' '}
+                Step 3: Preview Your Design{' '}
+              </Text>
+              <Text style={{paddingTop: 40, fontSize: 20, textAlign: 'center'}}>
+                Preview how your decisions
+              </Text>
+              <Text style={{paddingTop: 10, fontSize: 20, textAlign: 'center'}}>
+                created your design.
+              </Text>
+              <Text style={{paddingTop: 10, fontSize: 20, textAlign: 'center'}}>
+                Not happy? Click back and make
+              </Text>
+              <Text style={{paddingTop: 10, fontSize: 20, textAlign: 'center'}}>
+                changes!
+              </Text>
+            </View>
+          </View>
         </TouchableOpacity>
         <View
           style={{
@@ -97,3 +96,19 @@ export default class Step3 extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  outerBorder: {
+    borderWidth: 4,
+    borderColor: '#ffd369',
+    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  innerBorder: {
+    borderWidth: 4,
+    borderColor: '#e1f2fb',
+    paddingTop: 140,
+    paddingBottom: 140,
+  },
+});
