@@ -36,23 +36,21 @@ export default class font extends React.Component {
           <View style={{flex: 1, backgroundColor: '#95adbe'}}>
             <Text
               style={{
-                width: Dimensions.get('window').width,
-                fontSize: 0.04 * width,
+                fontSize: 0.08 * width,
                 textAlign: 'center',
-                paddingBottom: 20,
-                marginTop: 20,
+                padding: 10,
+                marginTop: 10,
                 alignSelf: 'center',
+                borderWidth: 1,
               }}>
               {' '}
               Calligraphy{' '}
             </Text>
             <Text
               style={{
-                fontSize: 0.06 * width,
+                fontSize: 0.07 * width,
                 fontFamily: 'Kindly Jasmine',
                 textAlign: 'center',
-                borderWidth: 1,
-                alignSelf: 'center',
                 padding: 15,
               }}>
               {' '}
@@ -66,8 +64,8 @@ export default class font extends React.Component {
               <Text
                 style={{
                   width: Dimensions.get('window').width,
-                  fontSize: 0.07 * width,
-                  paddingTop: 40,
+                  fontSize: 0.09 * width,
+                  paddingTop: 7,
                   textAlign: 'center',
                   fontFamily: 'Kindly Jasmine',
                 }}>
@@ -76,7 +74,7 @@ export default class font extends React.Component {
               <Text
                 style={{
                   width: Dimensions.get('window').width,
-                  fontSize: 0.07 * width,
+                  fontSize: 0.09 * width,
                   paddingTop: 10,
                   textAlign: 'center',
                   alignSelf: 'center',
@@ -87,7 +85,7 @@ export default class font extends React.Component {
               <Text
                 style={{
                   width: Dimensions.get('window').width,
-                  fontSize: 0.07 * width,
+                  fontSize: 0.09 * width,
                   paddingTop: 10,
                   textAlign: 'center',
                   alignSelf: 'center',
@@ -98,7 +96,7 @@ export default class font extends React.Component {
               <Text
                 style={{
                   width: Dimensions.get('window').width,
-                  fontSize: 0.07 * width,
+                  fontSize: 0.09 * width,
                   paddingTop: 10,
                   textAlign: 'center',
                   alignSelf: 'center',
@@ -113,9 +111,6 @@ export default class font extends React.Component {
         <TouchableOpacity
           style={{
             flex: 4,
-            //justifyContent: 'center',
-            alignSelf: 'center',
-
             width: Dimensions.get('window').width,
             paddingTop: 10,
           }}
@@ -129,25 +124,22 @@ export default class font extends React.Component {
           <View style={{flex: 1, backgroundColor: '#465881'}}>
             <Text
               style={{
-                width: Dimensions.get('window').width,
-                fontSize: 0.04 * width,
+                fontSize: 0.08 * width,
                 textAlign: 'center',
-                paddingBottom: 20,
-                marginTop: 20,
+                padding: 10,
+                marginTop: 7,
                 alignSelf: 'center',
+                borderWidth: 1,
               }}>
               {' '}
               Simple{' '}
             </Text>
-
             <Text
               style={{
-                fontSize: 0.05 * width,
+                fontSize: 0.06 * width,
                 fontFamily: 'Quicksand-VariableFont:wght',
                 textAlign: 'center',
-                borderWidth: 1,
-                alignSelf: 'center',
-                padding: 15,
+                padding: 10,
               }}>
               {' '}
               Quicksand{' '}
@@ -159,9 +151,9 @@ export default class font extends React.Component {
               }}>
               <Text
                 style={{
-                  paddingTop: 30,
+                  paddingTop: 5,
                   width: Dimensions.get('window').width,
-                  fontSize: 0.05 * width,
+                  fontSize: 0.07 * width,
                   textAlign: 'center',
                   alignSelf: 'center',
                   fontFamily: 'Quicksand-VariableFont:wght',
@@ -170,9 +162,8 @@ export default class font extends React.Component {
               </Text>
               <Text
                 style={{
-                  paddingTop: 10,
                   width: Dimensions.get('window').width,
-                  fontSize: 0.05 * width,
+                  fontSize: 0.07 * width,
                   textAlign: 'center',
                   alignSelf: 'center',
                   fontFamily: 'Quicksand-VariableFont:wght',
@@ -181,9 +172,8 @@ export default class font extends React.Component {
               </Text>
               <Text
                 style={{
-                  paddingTop: 10,
                   width: Dimensions.get('window').width,
-                  fontSize: 0.05 * width,
+                  fontSize: 0.07 * width,
                   textAlign: 'center',
                   alignSelf: 'center',
                   fontFamily: 'Quicksand-VariableFont:wght',
@@ -192,9 +182,8 @@ export default class font extends React.Component {
               </Text>
               <Text
                 style={{
-                  paddingTop: 10,
                   width: Dimensions.get('window').width,
-                  fontSize: 0.05 * width,
+                  fontSize: 0.07 * width,
                   textAlign: 'center',
                   alignSelf: 'center',
                   fontFamily: 'Quicksand-VariableFont:wght',
