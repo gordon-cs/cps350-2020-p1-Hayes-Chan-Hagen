@@ -26,8 +26,8 @@ export default class Preview extends React.Component {
     const {navigate} = this.props.navigation;
     const backgroundImage = this.props.navigation.getParam('pic');
     const backgroundPhoto = this.props.navigation.getParam('photo');
-    const biblePreview = this.props.navigation.getParam('bibleApiDone');
-    const bibleRef = this.props.navigation.getParam('bibleRDone');
+    const biblePreview = this.props.navigation.getParam('bibleApiResult');
+    const bibleRef = this.props.navigation.getParam('bibleRResult');
     console.log(biblePreview);
     console.log(bibleRef);
     console.log(this.props.navigation.state.params.pic);
@@ -82,7 +82,7 @@ export default class Preview extends React.Component {
             </View>
           </View>
 
-          <View style={{flex: 0.09, backgroundColor: '#95adbe'}}>
+          <View style={{flex: 0.08, backgroundColor: '#95adbe'}}>
             <View
               style={{
                 borderBottomColor: 'black',
